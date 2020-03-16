@@ -16,3 +16,13 @@
 /home/lr/projects/ebook-backend/obj/Debug/netcoreapp3.1/staticwebassets/ebook-backend.StaticWebAssets.xml
 /home/lr/projects/ebook-backend/obj/Debug/netcoreapp3.1/ebook-backend.dll
 /home/lr/projects/ebook-backend/obj/Debug/netcoreapp3.1/ebook-backend.pdb
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/MySqlConnector.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
+/home/lr/projects/ebook-backend/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+/home/lr/projects/ebook-backend/obj/Debug/netcoreapp3.1/ebook-backend.csproj.CopyComplete

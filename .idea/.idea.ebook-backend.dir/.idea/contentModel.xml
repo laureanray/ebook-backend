@@ -8,6 +8,15 @@
       <e p="Controllers" t="Include">
         <e p="WeatherForecastController.cs" t="Include" />
       </e>
+      <e p="Data" t="Include">
+        <e p="ApplicationDbContext.cs" t="Include" />
+        <e p="DbInitializer.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Admin.cs" t="Include" />
+        <e p="Instructor.cs" t="Include" />
+        <e p="Student.cs" t="Include" />
+      </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
