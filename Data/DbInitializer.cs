@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 using ebook_backend.Models;
+using Microsoft.AspNetCore.Identity;
+using BCrypt.Net;
 
 namespace ebook_backend.Data
 {
@@ -37,8 +39,11 @@ namespace ebook_backend.Data
                 }
             };
 
+            
+            
             foreach (var student in students)
             {
+                student.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
                 context.Students.Add(student);
             }
 
