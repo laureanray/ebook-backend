@@ -72,6 +72,14 @@ namespace ebook_backend
                 app.UseDeveloperExceptionPage();
             }
 
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseAuthentication();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();

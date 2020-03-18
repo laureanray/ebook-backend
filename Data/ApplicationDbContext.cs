@@ -13,5 +13,7 @@ namespace ebook_backend.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Exam> Exams { get; set; }
     }
 }

@@ -24,12 +24,13 @@ namespace ebook_backend.Controllers
             _studentService = studentService;
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public async Task<IEnumerable<Student>> GetStudents()
         {
             return await _studentService.GetAll();
         }
+        
+        
 
         [AllowAnonymous]
         [Route("auth")]

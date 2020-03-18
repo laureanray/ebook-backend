@@ -6,6 +6,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="Controllers" t="Include">
+        <e p="CppCompilerController.cs" t="Include" />
         <e p="StudentController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
@@ -17,9 +18,17 @@
       </e>
       <e p="Models" t="Include">
         <e p="Admin.cs" t="Include" />
+        <e p="Book.cs" t="Include" />
+        <e p="Chapter.cs" t="Include" />
+        <e p="CompileResult.cs" t="Include" />
+        <e p="CompileTask.cs" t="Include" />
+        <e p="Exam.cs" t="Include" />
+        <e p="ExamItem.cs" t="Include" />
+        <e p="ExamType.cs" t="Include" />
         <e p="Instructor.cs" t="Include" />
         <e p="Login.cs" t="Include" />
         <e p="Student.cs" t="Include" />
+        <e p="Topic.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
@@ -29,23 +38,13 @@
         <e p="StudentService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
+      <e p="Temp" t="Include">
+        <e p="test.cpp" t="Include" />
+      </e>
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="ebook-backend.csproj" t="IncludeRecursive" />
-      <e p="mono_crash.mem.15046.1.blob" t="Include" />
-      <e p="mono_crash.mem.15272.1.blob" t="Include" />
-      <e p="mono_crash.mem.15592.1.blob" t="Include" />
-      <e p="mono_crash.mem.16815.1.blob" t="Include" />
-      <e p="mono_crash.mem.17204.1.blob" t="Include" />
-      <e p="mono_crash.mem.21336.1.blob" t="Include" />
-      <e p="mono_crash.mem.22008.1.blob" t="Include" />
-      <e p="mono_crash.mem.23491.1.blob" t="Include" />
-      <e p="mono_crash.mem.24450.1.blob" t="Include" />
-      <e p="mono_crash.mem.24672.1.blob" t="Include" />
-      <e p="mono_crash.mem.25230.1.blob" t="Include" />
-      <e p="mono_crash.mem.25347.1.blob" t="Include" />
-      <e p="mono_crash.mem.29466.1.blob" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
