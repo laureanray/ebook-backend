@@ -7,7 +7,9 @@
       <e p=".gitignore" t="Include" />
       <e p="Controllers" t="Include">
         <e p="AdminController.cs" t="Include" />
+        <e p="BookController.cs" t="Include" />
         <e p="CppCompilerController.cs" t="Include" />
+        <e p="ExamController.cs" t="Include" />
         <e p="InsructorController.cs" t="Include" />
         <e p="StudentController.cs" t="Include" />
       </e>
@@ -22,6 +24,7 @@
         <e p="Admin.cs" t="Include" />
         <e p="Book.cs" t="Include" />
         <e p="Chapter.cs" t="Include" />
+        <e p="Choice.cs" t="Include" />
         <e p="CompileResult.cs" t="Include" />
         <e p="CompileTask.cs" t="Include" />
         <e p="Exam.cs" t="Include" />

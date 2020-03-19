@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/InstructorService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/BookController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ExamController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Choice.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Instructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Instructor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ExamItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ExamItem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +20,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Services/StudentService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Choice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/ExamController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DbInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/BookController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Admin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Instructor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
@@ -62,7 +66,6 @@
         <option value="$PROJECT_DIR$/Models/Topic.cs" />
         <option value="$PROJECT_DIR$/Models/Chapter.cs" />
         <option value="$PROJECT_DIR$/Models/ExamType.cs" />
-        <option value="$PROJECT_DIR$/Models/ExamItem.cs" />
         <option value="$PROJECT_DIR$/Models/Exam.cs" />
         <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
         <option value="$PROJECT_DIR$/Models/CompileResult.cs" />
@@ -78,6 +81,11 @@
         <option value="$PROJECT_DIR$/Services/InstructorService.cs" />
         <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/BookController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ExamController.cs" />
+        <option value="$PROJECT_DIR$/Models/Choices.cs" />
+        <option value="$PROJECT_DIR$/Models/Choice.cs" />
+        <option value="$PROJECT_DIR$/Models/ExamItem.cs" />
       </list>
     </option>
   </component>
@@ -144,7 +152,8 @@
       <workItem from="1584357896517" duration="6527000" />
       <workItem from="1584433239246" duration="12980000" />
       <workItem from="1584532961181" duration="7929000" />
-      <workItem from="1584602750314" duration="4246000" />
+      <workItem from="1584602750314" duration="6668000" />
+      <workItem from="1584620132212" duration="3086000" />
     </task>
     <servers />
   </component>
@@ -178,26 +187,26 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="298" width="424" height="494" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584548771566" />
-    <state width="1878" height="384" key="GridCell.Tab.0.bottom" timestamp="1584604421880">
+    <state width="1878" height="384" key="GridCell.Tab.0.bottom" timestamp="1584614506458">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.bottom/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1878" height="384" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584604421880" />
-    <state width="1878" height="384" key="GridCell.Tab.0.center" timestamp="1584604421880">
+    <state width="1878" height="384" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584614506458" />
+    <state width="1878" height="384" key="GridCell.Tab.0.center" timestamp="1584614506458">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.center/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1878" height="384" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584604421880" />
-    <state width="1878" height="384" key="GridCell.Tab.0.left" timestamp="1584604421880">
+    <state width="1878" height="384" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584614506458" />
+    <state width="1878" height="384" key="GridCell.Tab.0.left" timestamp="1584614506458">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.left/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1878" height="384" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584604421880" />
-    <state width="1878" height="384" key="GridCell.Tab.0.right" timestamp="1584604421880">
+    <state width="1878" height="384" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584614506458" />
+    <state width="1878" height="384" key="GridCell.Tab.0.right" timestamp="1584614506458">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.right/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1878" height="384" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584604421880" />
+    <state width="1878" height="384" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584614506458" />
     <state width="1324" height="227" key="GridCell.Tab.1.bottom" timestamp="1584515195316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -291,11 +300,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584603673988" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584606887015">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584630075639">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584459477765" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584606887015" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584630075639" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
