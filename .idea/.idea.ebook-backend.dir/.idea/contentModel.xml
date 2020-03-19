@@ -8,6 +8,7 @@
       <e p="Controllers" t="Include">
         <e p="AdminController.cs" t="Include" />
         <e p="CppCompilerController.cs" t="Include" />
+        <e p="InsructorController.cs" t="Include" />
         <e p="StudentController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
@@ -37,6 +38,7 @@
       </e>
       <e p="Services" t="Include">
         <e p="AdminService.cs" t="Include" />
+        <e p="InstructorService.cs" t="Include" />
         <e p="StudentService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
