@@ -9,6 +9,7 @@ using ebook_backend.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace ebook_backend.Controllers
 {
@@ -55,12 +56,31 @@ namespace ebook_backend.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<ActionResult<Student>> AddStudent([FromBody] Student student)
         {
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetStudent), new {id = student.Id}, student);
+        }
+
+        [HttpPost("update/{id}")]
+        public async Task<ActionResult<Student>> UpdateStudent(long id, [FromBody] Student student)
+        {
+            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == id);
+
+            if (studentToUpdate == null) return NotFound();
+
+            studentToUpdate.FirstName = student.FirstName;
+            studentToUpdate.LastName = student.LastName;
+            studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
+            studentToUpdate.DateUpdated = DateTime.Now;
+
+            _context.Entry(studentToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return studentToUpdate;
         }
     }
 }    
