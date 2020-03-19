@@ -61,6 +61,7 @@ namespace ebook_backend
                 options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IAdminService, AdminService>();
 
         }
 
