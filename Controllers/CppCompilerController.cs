@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using ebook_backend.Models;
@@ -16,10 +17,12 @@ namespace ebook_backend.Controllers
         [Route("compile")]
         [HttpPost]
         public ActionResult Compile([FromBody] CompileTask task)
-        {
-            var filename = DateTime.Now.GetHashCode();
-            System.IO.File.WriteAllText(Path + filename.ToString() +  ".cpp", task.Source);
+        { 
+            var filename = Path + DateTime.Now.GetHashCode().ToString();
+            var filenameExt = filename + ".cpp";
+            System.IO.File.WriteAllText(filenameExt, task.Source);
 
+            Process.Start("make", filename);
             return Ok();
         }
     }

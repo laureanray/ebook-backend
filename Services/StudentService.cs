@@ -13,6 +13,7 @@ using ebook_backend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -21,7 +22,7 @@ namespace ebook_backend.Services
     public interface IStudentService
     {
         Task<Student> Authenticate(string studentNumber, string password);
-        Task<List<Student>> GetAll();    
+        
     }
 
     public class StudentService : IStudentService
@@ -64,9 +65,6 @@ namespace ebook_backend.Services
             return student;
         }
 
-        public Task<List<Student>> GetAll()
-        {
-            return _context.Students.ToListAsync();
-        }
+      
     }
 }

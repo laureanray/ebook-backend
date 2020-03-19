@@ -18,20 +18,20 @@ namespace ebook_backend.Controllers
     public class StudentController : ControllerBase
     {
         private readonly IStudentService _studentService;
+        private readonly ApplicationDbContext _context;
 
-        public StudentController(IStudentService studentService)
+        public StudentController(IStudentService studentService, ApplicationDbContext context)
         {
             _studentService = studentService;
+            _context = context;
         }
 
         [HttpGet]
         public async Task<IEnumerable<Student>> GetStudents()
         {
-            return await _studentService.GetAll();
+            return await _context.Students.ToListAsync();
         }
         
-        
-
         [AllowAnonymous]
         [Route("auth")]
         [HttpPost]
@@ -44,9 +44,23 @@ namespace ebook_backend.Controllers
                 return BadRequest(new {message = "Invalid Credentials"});
             }    
       
-
             return Ok(student);
         }
-        
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Student>> GetStudent(long id)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == id);
+            return student;
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult<Student>> AddStudent([FromBody] Student student)
+        {
+            _context.Students.Add(student);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetStudent), new {id = student.Id}, student);
+        }
     }
 }    
