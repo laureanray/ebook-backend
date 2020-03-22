@@ -11,8 +11,7 @@ namespace ebook_backend.Models
         public string StudentNumber { get; set; }
         public string Password { get; set; }
         public string Token { get; set; }
-        
-        public DateTime DateCreated { get; set; }
+            public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
     }
 }

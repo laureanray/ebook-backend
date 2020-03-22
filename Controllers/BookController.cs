@@ -12,6 +12,7 @@ namespace ebook_backend.Controllers
 {
     [Authorize]
     [ApiController]
+    [Route("api/[controller]")]
     public class BookController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -35,7 +36,7 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<List<Book>> GetAllBooks()
         {
-            return await _context.Books.ToListAsync();
+            return await _context.Books.Include(b => b.Chapters).ThenInclude(a => a.Topics).ToListAsync();
         }
 
         [HttpGet("{id}")]

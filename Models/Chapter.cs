@@ -8,6 +8,7 @@ namespace ebook_backend.Models
         public long BookId { get; set; }
         public Book Book { get; set; }
      
+        public string ChapterTitle { get; set; }
         public List<Topic> Topics { get; set; }
     }
 }
