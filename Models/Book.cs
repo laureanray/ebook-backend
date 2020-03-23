@@ -10,7 +10,7 @@ namespace ebook_backend.Models
         public string BookDescription { get; set; }
         public string BookAuthor { get; set; }
         public List<Chapter> Chapters { get; set; }
-        
+        public string BookCoverUrl { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
     }

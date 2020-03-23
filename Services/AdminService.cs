@@ -22,7 +22,6 @@ namespace ebook_backend.Services
     public interface IAdminService
     {
         Task<Admin> Authenticate(string studentNumber, string password);
-        
     }
 
     public class AdminService : IAdminService

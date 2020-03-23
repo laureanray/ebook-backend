@@ -9,14 +9,17 @@ namespace ebook_backend.Controllers
 {
     [Authorize]
     [ApiController]
+    [Route("api/[controller]")]
     public class InstructorController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        private readonly InstructorService _instructorService;
+        private readonly IInstructorService _instructorService;
+        private readonly IAdminService _adminService;
 
-        public InstructorController(ApplicationDbContext context, InstructorService instructorService)
+        public InstructorController( 
+            IAdminService adminService,
+            IInstructorService instructorService)
         {
-            _context = context;
+            _adminService = adminService;
             _instructorService = instructorService;
         }
 
@@ -24,11 +27,13 @@ namespace ebook_backend.Controllers
         [HttpPost("auth")]
         public async Task<ActionResult<Admin>> Authenticate([FromBody] Login login)
         {
-            var admin = await _instructorService.Authenticate(login.UniqueIdentifier, login.Password);
+            var instructor = await _instructorService.Authenticate(login.UniqueIdentifier, login.Password);
+            if (instructor != null) return Ok(instructor);
 
-            if (admin == null) return BadRequest();
+            var admin = await _adminService.Authenticate(login.UniqueIdentifier, login.Password);
+            if (admin != null) return Ok(admin);
 
-            return Ok(admin);
+            return BadRequest(new {message = "Invalid Credentials"});
         }
 
 
