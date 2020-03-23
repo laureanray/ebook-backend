@@ -50,28 +50,40 @@ namespace ebook_backend.Data
             {
                 new Instructor
                 {
-                    FirstName = "Juan",
-                    LastName = "Dela Cruz",
-                    MiddleName = "Santos",
-                    Password = "P@$$w0rd",
-                    StudentNumber = "20151234",
+                    FirstName = "Ruben",
+                    LastName = "Pureza",
+                    MiddleName = "Gerud",
+                    Password = "1234",
+                    Username = "ruben",
                     DateCreated = DateTime.Now
                 },
                 new Instructor
                 {
-                    FirstName = "Someone",
-                    LastName = "Doe",
+                    FirstName = "Angela",
+                    LastName = "Santos",
                     MiddleName = "Cruz",
-                    Password = "P@$$w0rd",
-                    StudentNumber = "20151134",
+                    Password = "1234",
+                    Username = "angela",
                     DateCreated = DateTime.Now
                 }
             };
-            foreach (var student in students)
+            foreach (var instructor in instructors)
             {
-                student.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
-                context.Students.Add(student);
+                instructor.Password = BCrypt.Net.BCrypt.HashPassword(instructor.Password);
+                context.Instructors.Add(instructor);
             }
+            context.SaveChanges();
+            //-------------- END ------------------
+            
+            //-------------- ADMIN ------------------
+            if (context.Students.Any()) return;
+            var admin = new Admin
+            {
+                Username = "admin",
+                Password = BCrypt.Net.BCrypt.HashPassword("1234"),
+                DateCreated = DateTime.Now
+            };
+            context.Admins.Add(admin);
             context.SaveChanges();
             //-------------- END ------------------
             

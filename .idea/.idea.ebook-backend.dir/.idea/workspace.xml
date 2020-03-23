@@ -79,9 +79,9 @@
         <option value="$PROJECT_DIR$/Services/AdminService.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
-        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
-        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/Models/Admin.cs" />
+        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
+        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
       </list>
     </option>
   </component>
@@ -155,7 +155,7 @@
       <workItem from="1584867732160" duration="5560000" />
       <workItem from="1584946221716" duration="623000" />
       <workItem from="1584957989731" duration="1520000" />
-      <workItem from="1584976144650" duration="5311000" />
+      <workItem from="1584976144650" duration="5546000" />
     </task>
     <servers />
   </component>
