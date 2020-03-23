@@ -22,6 +22,7 @@
       </e>
       <e p="Models" t="Include">
         <e p="Admin.cs" t="Include" />
+        <e p="AdminInstructorResponse.cs" t="Include" />
         <e p="Book.cs" t="Include" />
         <e p="Chapter.cs" t="Include" />
         <e p="Choice.cs" t="Include" />

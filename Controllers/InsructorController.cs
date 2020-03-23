@@ -25,13 +25,26 @@ namespace ebook_backend.Controllers
 
         [AllowAnonymous]
         [HttpPost("auth")]
-        public async Task<ActionResult<Admin>> Authenticate([FromBody] Login login)
+        public async Task<ActionResult<AdminInstructorResponse>> Authenticate([FromBody] Login login)
         {
+            
+            var response = new AdminInstructorResponse();
+
             var instructor = await _instructorService.Authenticate(login.UniqueIdentifier, login.Password);
-            if (instructor != null) return Ok(instructor);
+            if (instructor != null)
+            {
+                response.Type = "Instructor";
+                response.Instructor = instructor;
+                return Ok(response);
+            }
 
             var admin = await _adminService.Authenticate(login.UniqueIdentifier, login.Password);
-            if (admin != null) return Ok(admin);
+            if (admin != null)
+            {
+                response.Type = "Admin";
+                response.Admin = admin;
+                return Ok(admin);
+            }
 
             return BadRequest(new {message = "Invalid Credentials"});
         }

@@ -24,7 +24,8 @@ namespace ebook_backend.Data
                         MiddleName = "Santos",
                         Password = "P@$$w0rd",
                         StudentNumber = "20151234",
-                        DateCreated = DateTime.Now
+                        DateCreated = DateTime.Now,
+                        FirstLogin = true
                     },
                     new Student
                     {
@@ -33,7 +34,9 @@ namespace ebook_backend.Data
                         MiddleName = "Cruz",
                         Password = "P@$$w0rd",
                         StudentNumber = "20151134",
-                        DateCreated = DateTime.Now
+                        DateCreated = DateTime.Now,
+                        FirstLogin = true
+
                     }
                 };
             foreach (var student in students)
@@ -55,7 +58,9 @@ namespace ebook_backend.Data
                     MiddleName = "Gerud",
                     Password = "1234",
                     Username = "ruben",
-                    DateCreated = DateTime.Now
+                    DateCreated = DateTime.Now,
+                    FirstLogin = true
+
                 },
                 new Instructor
                 {
@@ -64,7 +69,9 @@ namespace ebook_backend.Data
                     MiddleName = "Cruz",
                     Password = "1234",
                     Username = "angela",
-                    DateCreated = DateTime.Now
+                    DateCreated = DateTime.Now,
+                    FirstLogin = true
+
                 }
             };
             foreach (var instructor in instructors)
