@@ -45,7 +45,7 @@ namespace ebook_backend.Data
             //-------------- END ------------------
             
             //-------------- INSTRUCTOR ------------------
-            if (context.Students.Any()) return;
+            if (context.Instructors.Any()) return;
             var instructors = new Instructor[]
             {
                 new Instructor
@@ -76,7 +76,7 @@ namespace ebook_backend.Data
             //-------------- END ------------------
             
             //-------------- ADMIN ------------------
-            if (context.Students.Any()) return;
+            if (context.Admins.Any()) return;
             var admin = new Admin
             {
                 Username = "admin",
