@@ -43,6 +43,38 @@ namespace ebook_backend.Data
             }
             context.SaveChanges();
             //-------------- END ------------------
+            
+            //-------------- INSTRUCTOR ------------------
+            if (context.Students.Any()) return;
+            var instructors = new Instructor[]
+            {
+                new Instructor
+                {
+                    FirstName = "Juan",
+                    LastName = "Dela Cruz",
+                    MiddleName = "Santos",
+                    Password = "P@$$w0rd",
+                    StudentNumber = "20151234",
+                    DateCreated = DateTime.Now
+                },
+                new Instructor
+                {
+                    FirstName = "Someone",
+                    LastName = "Doe",
+                    MiddleName = "Cruz",
+                    Password = "P@$$w0rd",
+                    StudentNumber = "20151134",
+                    DateCreated = DateTime.Now
+                }
+            };
+            foreach (var student in students)
+            {
+                student.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
+                context.Students.Add(student);
+            }
+            context.SaveChanges();
+            //-------------- END ------------------
+            
 
             //-------------- BOOKS ------------------
             if(context.Books.Any()) return;

@@ -3,26 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/InsructorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Admin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Admin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DbInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Instructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Instructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Student.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AdminService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AdminService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ebook-backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ebook-backend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ebook-backend.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/ebook-backend.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/ebook-backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/ebook-backend.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +73,15 @@
         <option value="$PROJECT_DIR$/Controllers/ExamController.cs" />
         <option value="$PROJECT_DIR$/Models/Topic.cs" />
         <option value="$PROJECT_DIR$/Models/Chapter.cs" />
-        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
         <option value="$PROJECT_DIR$/Controllers/BookController.cs" />
         <option value="$PROJECT_DIR$/Models/Book.cs" />
         <option value="$PROJECT_DIR$/Models/Student.cs" />
-        <option value="$PROJECT_DIR$/Models/Admin.cs" />
-        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/Services/AdminService.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
+        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
+        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
+        <option value="$PROJECT_DIR$/Models/Admin.cs" />
       </list>
     </option>
   </component>
@@ -173,7 +155,7 @@
       <workItem from="1584867732160" duration="5560000" />
       <workItem from="1584946221716" duration="623000" />
       <workItem from="1584957989731" duration="1520000" />
-      <workItem from="1584976144650" duration="5065000" />
+      <workItem from="1584976144650" duration="5311000" />
     </task>
     <servers />
   </component>
@@ -333,12 +315,12 @@
     </state>
     <state x="444" y="174" width="479" height="482" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959505226" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584990491618" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584990282472">
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1584991620767">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584459477765" />
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959506942" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584990282472" />
+    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584991620767" />
     <state x="2363" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989631402" />
   </component>
   <component name="XDebuggerManager">
