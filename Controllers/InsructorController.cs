@@ -43,7 +43,7 @@ namespace ebook_backend.Controllers
             {
                 response.Type = "Admin";
                 response.Admin = admin;
-                return Ok(admin);
+                return Ok(response);
             }
 
             return BadRequest(new {message = "Invalid Credentials"});

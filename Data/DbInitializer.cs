@@ -101,6 +101,7 @@ namespace ebook_backend.Data
             {
                 new Book
                 {
+                    BookTitle = "C++ Programming",
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
@@ -137,6 +138,7 @@ namespace ebook_backend.Data
                 },
                 new Book
                 {
+                    BookTitle = "Discrete Math",
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
@@ -145,42 +147,6 @@ namespace ebook_backend.Data
                         new Chapter
                         {
                             ChapterTitle = "Chapter 2",
-                            Topics = new List<Topic>
-                            {
-                                new Topic
-                                {
-                                    TopicTitle = "Topic 1",
-                                    HtmlContent = "<h1> Hello World </h1>"
-                                },
-                                new Topic
-                                {
-                                    TopicTitle = "Topic 2",
-                                    HtmlContent = "<h1> Hello World </h1>"
-                                },
-                                new Topic
-                                {
-                                    TopicTitle = "Topic 3",
-                                    HtmlContent = "<h1> Hello World </h1>"
-                                },
-                                new Topic
-                                {
-                                    TopicTitle = "Topic 4",
-                                    HtmlContent = "<h1> Hello World </h1>"
-                                }
-                            }
-                        }
-                    }
-                },
-                new Book
-                {
-                    BookAuthor = "Juan Dela Cruz",
-                    BookDescription = "Book Description",
-                    DateCreated = DateTime.Now,
-                    Chapters = new List<Chapter>
-                    {
-                        new Chapter
-                        {
-                            ChapterTitle = "Chapter 3",
                             Topics = new List<Topic>
                             {
                                 new Topic
