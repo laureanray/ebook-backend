@@ -42,7 +42,8 @@ namespace ebook_backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetBook(long id)
         {
-            var book = await _context.Books.FirstOrDefaultAsync(a => a.Id == id);
+            var book = await _context.Books
+                .Include(b => b.Chapters).ThenInclude(a => a.Topics).FirstOrDefaultAsync(a => a.Id == id);
             if (book == null) return NotFound();
             return book;
         }

@@ -28,7 +28,7 @@ namespace ebook_backend.Data
                         FirstLogin = true
                     },
                     new Student
-                    {
+                    {    
                         FirstName = "Someone",
                         LastName = "Doe",
                         MiddleName = "Cruz",
