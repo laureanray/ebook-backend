@@ -47,9 +47,24 @@ namespace ebook_backend.Controllers
             if (book == null) return NotFound();
             return book;
         }
-        
-        
-        
-        
+
+
+        [HttpPost("topic/update")]
+        public async Task<ActionResult<Topic>> UpdateTopic([FromBody] Topic topic)
+        {
+            var topicToUpdate = await _context.Topics.FirstOrDefaultAsync(t => t.Id == topic.Id);
+            if (topicToUpdate == null) return NotFound();
+
+            topicToUpdate.HtmlContent = topic.HtmlContent;
+
+            _context.Entry(topicToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return topicToUpdate;
+    
+        }
+
+
     }
 }

@@ -65,6 +65,8 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="ebook-backend.csproj" t="IncludeRecursive" />
+      <e p="mono_crash.mem.5064.1.blob" t="Include" />
+      <e p="mono_crash.mem.861.1.blob" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">

@@ -146,7 +146,7 @@ namespace ebook_backend.Data
                     {
                         new Chapter
                         {
-                            ChapterTitle = "Chapter 2",
+                            ChapterTitle = "Chapter 1",
                             Topics = new List<Topic>
                             {
                                 new Topic
