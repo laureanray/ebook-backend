@@ -56,7 +56,8 @@ namespace ebook_backend.Controllers
             if (topicToUpdate == null) return NotFound();
 
             topicToUpdate.HtmlContent = topic.HtmlContent;
-
+            topicToUpdate.LastUpdated = DateTime.Now;
+            
             _context.Entry(topicToUpdate).State = EntityState.Modified;
 
             await _context.SaveChangesAsync();
