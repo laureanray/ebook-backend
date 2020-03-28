@@ -78,6 +78,20 @@ namespace ebook_backend.Controllers
             return topic;
         }
 
+        [HttpGet("topic/delete/{id}")]
+        public async Task<ActionResult<Topic>> DeleteTopic(long id)
+        {
+            var topicToDelete = await _context.Topics.FirstOrDefaultAsync(t => t.Id == id);
+
+            if (topicToDelete == null) return NotFound();
+
+            _context.Topics.Remove(topicToDelete);
+
+            await _context.SaveChangesAsync();
+
+            return topicToDelete;
+        }
+
 
     }
 }
