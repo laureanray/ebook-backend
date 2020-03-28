@@ -66,6 +66,18 @@ namespace ebook_backend.Controllers
     
         }
 
+        [HttpPost("topic/add")]
+        public async Task<ActionResult<Topic>> AddTopic([FromBody] Topic topic)
+        {
+            topic.LastUpdated = DateTime.Now;
+
+            _context.Topics.Add(topic);
+
+            await _context.SaveChangesAsync();
+
+            return topic;
+        }
+
 
     }
 }
