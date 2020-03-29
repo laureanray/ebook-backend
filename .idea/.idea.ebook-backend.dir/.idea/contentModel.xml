@@ -40,6 +40,12 @@
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
       </e>
+      <e p="Resources" t="Include">
+        <e p="Images" t="Include">
+          <e p="-62135596800000" t="Include" />
+          <e p="user.png" t="Include" />
+        </e>
+      </e>
       <e p="Services" t="Include">
         <e p="AdminService.cs" t="Include" />
         <e p="InstructorService.cs" t="Include" />
