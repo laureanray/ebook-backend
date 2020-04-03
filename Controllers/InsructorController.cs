@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ebook_backend.Data;
 using ebook_backend.Models;
 using ebook_backend.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ebook_backend.Controllers
 {
@@ -14,13 +16,21 @@ namespace ebook_backend.Controllers
     {
         private readonly IInstructorService _instructorService;
         private readonly IAdminService _adminService;
+        private readonly ApplicationDbContext _context;
 
         public InstructorController( 
             IAdminService adminService,
-            IInstructorService instructorService)
+            IInstructorService instructorService, ApplicationDbContext context)
         {
             _adminService = adminService;
             _instructorService = instructorService;
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Instructor>>> GetAll()
+        {
+            return await _context.Instructors.ToListAsync();
         }
 
         [AllowAnonymous]
