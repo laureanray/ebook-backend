@@ -24,6 +24,9 @@ namespace ebook_backend.Data
                         MiddleName = "Santos",
                         Password = "P@$$w0rd",
                         StudentNumber = "20151234",
+                        YearLevel = "1",
+                        Section = "SEC1",
+                        Course = "BSCPE",
                         DateCreated = DateTime.Now,
                         FirstLogin = true
                     },
@@ -33,6 +36,9 @@ namespace ebook_backend.Data
                         LastName = "Doe",
                         MiddleName = "Cruz",
                         Password = "P@$$w0rd",
+                        YearLevel = "1",
+                        Section = "SEC1",
+                        Course = "BSCPE",
                         StudentNumber = "20151134",
                         DateCreated = DateTime.Now,
                         FirstLogin = true
@@ -58,6 +64,8 @@ namespace ebook_backend.Data
                     MiddleName = "Gerud",
                     Password = "1234",
                     Username = "ruben",
+                    EmployeeNumber = "1112",
+                    Honorifics = "Engr.",
                     DateCreated = DateTime.Now,
                     FirstLogin = true
 
@@ -67,6 +75,8 @@ namespace ebook_backend.Data
                     FirstName = "Angela",
                     LastName = "Santos",
                     MiddleName = "Cruz",
+                    EmployeeNumber = "1113",
+                    Honorifics = "Engr.",
                     Password = "1234",
                     Username = "angela",
                     DateCreated = DateTime.Now,
