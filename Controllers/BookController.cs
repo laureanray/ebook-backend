@@ -29,9 +29,7 @@ namespace ebook_backend.Controllers
         {
             book.DateCreated = DateTime.Now;
             _context.Books.Add(book);
-
             await _context.SaveChangesAsync();
-
             return book;
         }
 
@@ -56,41 +54,48 @@ namespace ebook_backend.Controllers
         {
             var topicToUpdate = await _context.Topics.FirstOrDefaultAsync(t => t.Id == topic.Id);
             if (topicToUpdate == null) return NotFound();
-
             topicToUpdate.HtmlContent = topic.HtmlContent;
             topicToUpdate.LastUpdated = DateTime.Now;
-            
             _context.Entry(topicToUpdate).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
             return topicToUpdate;
-    
         }
 
         [HttpPost("topic/add")]
         public async Task<ActionResult<Topic>> AddTopic([FromBody] Topic topic)
         {
             topic.LastUpdated = DateTime.Now;
-
             _context.Topics.Add(topic);
-
             await _context.SaveChangesAsync();
-
             return topic;
+        }
+
+        [HttpPost("chapter/add")]
+        public async Task<ActionResult<Chapter>> AddChapter([FromBody] Chapter chapter)
+        {
+            _context.Chapters.Add(chapter);
+            await _context.SaveChangesAsync();
+            return chapter;
+        }
+
+        [HttpPost("chapter/update")]
+        public async Task<ActionResult<Chapter>> UpdateChapter([FromBody] Chapter chapter)
+        {
+            var chapterToUpdate = await _context.Chapters.FirstOrDefaultAsync(c => c.Id == chapter.Id);
+            if (chapterToUpdate == null) return NotFound();
+            chapterToUpdate.ChapterTitle = chapter.ChapterTitle;
+            _context.Entry(chapterToUpdate).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return chapter;
         }
 
         [HttpGet("topic/delete/{id}")]
         public async Task<ActionResult<Topic>> DeleteTopic(long id)
         {
             var topicToDelete = await _context.Topics.FirstOrDefaultAsync(t => t.Id == id);
-
             if (topicToDelete == null) return NotFound();
-
             _context.Topics.Remove(topicToDelete);
-
             await _context.SaveChangesAsync();
-
             return topicToDelete;
         }
         
@@ -133,7 +138,5 @@ namespace ebook_backend.Controllers
                 return StatusCode(500, $"Internal server error: {ex}");
             }
         }
-
-
     }
 }
