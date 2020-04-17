@@ -24,7 +24,7 @@ namespace ebook_backend.Controllers
             _context = context;
         }
 
-        [HttpPost("/add")]
+        [HttpPost("add")]
         public async Task<ActionResult<Book>> AddBook([FromBody] Book book)
         {
             book.DateCreated = DateTime.Now;
@@ -36,14 +36,22 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<List<Book>> GetAllBooks()
         {
-            return await _context.Books.Include(b => b.Chapters).ThenInclude(a => a.Topics).ToListAsync();
+            return await _context.Books
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Topics)
+                .Include(b => b.Courses)
+                .ThenInclude(a => a.Years).ToListAsync();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetBook(long id)
         {
             var book = await _context.Books
-                .Include(b => b.Chapters).ThenInclude(a => a.Topics).FirstOrDefaultAsync(a => a.Id == id);
+                .Include(b => b.Chapters)
+                    .ThenInclude(a => a.Topics)
+                .Include(b => b.Courses)
+                    .ThenInclude(a => a.Years)
+                .FirstOrDefaultAsync(a => a.Id == id);
             if (book == null) return NotFound();
             return book;
         }

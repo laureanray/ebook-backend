@@ -115,6 +115,55 @@ namespace ebook_backend.Data
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
+                    Courses = new List<Course>
+                    {
+                      new Course
+                      {
+                          CourseName = "BS in Computer Engineering",
+                          Years = new List<Year>
+                          {
+                             new Year
+                             {
+                                 YearLevel = "1st"
+                             },
+                             new Year
+                             {
+                                 YearLevel = "2nd"
+                             },
+                             new Year
+                             {
+                                 YearLevel = "3rd"
+                             },
+                             new Year
+                             {
+                                 YearLevel = "4th"
+                             }
+                          }
+                      }, 
+                      new Course
+                      {
+                          CourseName = "BS in Information Technology",
+                          Years = new List<Year>
+                          {
+                              new Year
+                              {
+                                  YearLevel = "1st"
+                              },
+                              new Year
+                              {
+                                  YearLevel = "2nd"
+                              },
+                              new Year
+                              {
+                                  YearLevel = "3rd"
+                              },
+                              new Year
+                              {
+                                  YearLevel = "4th"
+                              }
+                          }
+                      }  
+                    },
                     Chapters = new List<Chapter>
                     {
                         new Chapter

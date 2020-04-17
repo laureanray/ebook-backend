@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_.19.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="Controllers" t="Include">
@@ -28,6 +28,7 @@
         <e p="Choice.cs" t="Include" />
         <e p="CompileResult.cs" t="Include" />
         <e p="CompileTask.cs" t="Include" />
+        <e p="Course.cs" t="Include" />
         <e p="Exam.cs" t="Include" />
         <e p="ExamItem.cs" t="Include" />
         <e p="ExamType.cs" t="Include" />
@@ -35,6 +36,7 @@
         <e p="Login.cs" t="Include" />
         <e p="Student.cs" t="Include" />
         <e p="Topic.cs" t="Include" />
+        <e p="Year.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
@@ -54,6 +56,16 @@
           <e p="202003292226464455.jpg" t="Include" />
           <e p="202003292227478140.jpg" t="Include" />
           <e p="202003292228021050.jpg" t="Include" />
+          <e p="202004060038211234.jpg" t="Include" />
+          <e p="202004060040415463.jpg" t="Include" />
+          <e p="202004060040547093.jpg" t="Include" />
+          <e p="202004062007390828.jpg" t="Include" />
+          <e p="202004180231301448.jpg" t="Include" />
+          <e p="202004180235179819.jpg" t="Include" />
+          <e p="202004180237344757.jpg" t="Include" />
+          <e p="202004180238283982.jpg" t="Include" />
+          <e p="202004180240187984.jpg" t="Include" />
+          <e p="202004180241438800.jpg" t="Include" />
           <e p="user.png" t="Include" />
         </e>
       </e>
