@@ -77,6 +77,7 @@ namespace ebook_backend.Controllers
             await _context.SaveChangesAsync();
             return topic;
         }
+        
 
         [HttpPost("chapter/add")]
         public async Task<ActionResult<Chapter>> AddChapter([FromBody] Chapter chapter)
@@ -105,6 +106,17 @@ namespace ebook_backend.Controllers
             _context.Topics.Remove(topicToDelete);
             await _context.SaveChangesAsync();
             return topicToDelete;
+        }
+
+        [HttpGet("chapter/delete/{id}")]
+        public async Task<ActionResult<Chapter>> DeleteChapter(long id)
+        {
+            var chapterToDelete = await _context.Chapters.FirstOrDefaultAsync(c => c.Id == id);
+            if (chapterToDelete == null) return NotFound();
+            _context.Chapters.Remove(chapterToDelete);
+            await _context.SaveChangesAsync();
+
+            return chapterToDelete;
         }
         
         public static String GetTimestamp(DateTime value)
