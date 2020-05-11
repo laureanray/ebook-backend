@@ -135,6 +135,10 @@ namespace ebook_backend.Controllers
             var accessToRemove = book.Courses.SingleOrDefault(c => c.Id == courseId);
             if (accessToRemove == null) return NotFound();
             book.Courses.Remove(accessToRemove);
+
+            _context.Entry(book).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            
             return book;
         }
 
