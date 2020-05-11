@@ -201,6 +201,7 @@ namespace ebook_backend.Data
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
+                    AccessibleToAll = true,
                     Chapters = new List<Chapter>
                     {
                         new Chapter

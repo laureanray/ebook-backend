@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using ebook_backend.Data;
@@ -73,6 +74,7 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Topic>> AddTopic([FromBody] Topic topic)
         {
             topic.LastUpdated = DateTime.Now;
+            topic.HtmlContent = "Type content here.";
             _context.Topics.Add(topic);
             await _context.SaveChangesAsync();
             return topic;
@@ -117,6 +119,17 @@ namespace ebook_backend.Controllers
             await _context.SaveChangesAsync();
 
             return chapterToDelete;
+        }
+
+        [HttpGet("removeAccess/{bookId}/{courseId}")]
+        public async Task<ActionResult<Book>> RemoveAccess(long bookId, long courseId)
+        {
+            var book = await _context.Books.FirstOrDefaultAsync(b => b.Id == bookId);
+            if (book == null) return NotFound();
+            var accessToRemove = book.Courses.SingleOrDefault(c => c.Id == courseId);
+            if (accessToRemove == null) return NotFound();
+            book.Courses.Remove(accessToRemove);
+            return book;
         }
         
         public static String GetTimestamp(DateTime value)
