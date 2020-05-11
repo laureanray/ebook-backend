@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -49,9 +50,9 @@ namespace ebook_backend.Controllers
         {
             var book = await _context.Books
                 .Include(b => b.Chapters)
-                    .ThenInclude(a => a.Topics)
+                .ThenInclude(a => a.Topics)
                 .Include(b => b.Courses)
-                    .ThenInclude(a => a.Years)
+                .ThenInclude(a => a.Years)
                 .FirstOrDefaultAsync(a => a.Id == id);
             if (book == null) return NotFound();
             return book;
@@ -79,7 +80,7 @@ namespace ebook_backend.Controllers
             await _context.SaveChangesAsync();
             return topic;
         }
-        
+
 
         [HttpPost("chapter/add")]
         public async Task<ActionResult<Chapter>> AddChapter([FromBody] Chapter chapter)
@@ -124,14 +125,19 @@ namespace ebook_backend.Controllers
         [HttpGet("removeAccess/{bookId}/{courseId}")]
         public async Task<ActionResult<Book>> RemoveAccess(long bookId, long courseId)
         {
-            var book = await _context.Books.FirstOrDefaultAsync(b => b.Id == bookId);
+            var book = await _context.Books
+                .Include(a => a.Chapters)
+                    .ThenInclude(q => q.Topics)
+                .Include(a => a.Courses)
+                    .ThenInclude(q => q.Years)
+                .FirstOrDefaultAsync(b => b.Id == bookId);
             if (book == null) return NotFound();
             var accessToRemove = book.Courses.SingleOrDefault(c => c.Id == courseId);
             if (accessToRemove == null) return NotFound();
             book.Courses.Remove(accessToRemove);
             return book;
         }
-        
+
         public static String GetTimestamp(DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");
@@ -145,21 +151,21 @@ namespace ebook_backend.Controllers
                 var file = Request.Form.Files[0];
                 var folderName = Path.Combine("Resources", "Images");
                 var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
- 
+
                 if (file.Length > 0)
                 {
                     // var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fileName = GetTimestamp(DateTime.Now) + ".jpg";
                     var fullPath = Path.Combine(pathToSave, fileName);
                     var dbPath = Path.Combine(folderName, fileName);
- 
+
                     using (var stream = new FileStream(fullPath, FileMode.Create))
-                    {    
+                    {
                         file.CopyTo(stream);
                     }
- 
-                    
-                    return Ok(new { dbPath });
+
+
+                    return Ok(new {dbPath});
                 }
                 else
                 {
