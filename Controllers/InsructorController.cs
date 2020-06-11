@@ -27,11 +27,31 @@ namespace ebook_backend.Controllers
             _context = context;
         }
 
-                                [HttpGet]
+        
+        
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Instructor>> GetInstructor(long id)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == id);
+            return instructor;
+        }
+
+        
+        [HttpGet]
         public async Task<ActionResult<List<Instructor>>> GetAll()
         {
             return await _context.Instructors.ToListAsync();
         }
+        
+        [HttpPost("add")]
+        public async Task<ActionResult<Instructor>> AddInstructor([FromBody] Instructor instructor)
+        {
+            _context.Instructors.Add(instructor);
+            instructor.Password = BCrypt.Net.BCrypt.HashPassword("1234");
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetInstructor), new {id = instructor.Id}, instructor);
+        }
+
 
         [AllowAnonymous]
         [HttpPost("auth")]
@@ -58,7 +78,23 @@ namespace ebook_backend.Controllers
 
             return BadRequest(new {message = "Invalid Credentials"});
         }
+        
+        [HttpPost("update-password")]
+        public async Task<ActionResult<Instructor>> UpdatePassword([FromBody] string newPassword, [FromBody] long instructorId)
+        {
+            var instructorToUpdate = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
 
+            if (instructorToUpdate == null) return NotFound();
 
+            instructorToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+            _context.Entry(instructorToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return instructorToUpdate;
+        }
     }
+
+    
 }

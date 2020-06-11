@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ebook_backend.Models
 {
@@ -19,6 +20,6 @@ namespace ebook_backend.Models
         public bool FirstLogin { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
-        
+        public virtual  ICollection<BookProgress> BookProgresses { get; set; }
     }
 }

@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/BookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/InsructorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DbInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/BookProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BookProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Student.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Year.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Year.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/StudentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/StudentService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
@@ -64,6 +93,7 @@
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Topic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/AdminService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/BookProgress.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,9 +108,6 @@
         <option value="$PROJECT_DIR$/Models/CompileResult.cs" />
         <option value="$PROJECT_DIR$/Models/CompileTask.cs" />
         <option value="$PROJECT_DIR$/Controllers/CppCompilerController.cs" />
-        <option value="$PROJECT_DIR$/Services/StudentService.cs" />
-        <option value="$PROJECT_DIR$/Controllers/StudentController.cs" />
-        <option value="$PROJECT_DIR$/Controllers/AdminController.cs" />
         <option value="$PROJECT_DIR$/Services/InstructorService.cs" />
         <option value="$PROJECT_DIR$/Models/Choices.cs" />
         <option value="$PROJECT_DIR$/Models/Choice.cs" />
@@ -94,18 +121,33 @@
         <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Models/Topic.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/Models/Student.cs" />
         <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
-        <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/Models/Year.cs" />
         <option value="$PROJECT_DIR$/Models/Course.cs" />
         <option value="$PROJECT_DIR$/Models/Book.cs" />
-        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
         <option value="$PROJECT_DIR$/Controllers/BookController.cs" />
+        <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
+        <option value="$PROJECT_DIR$/Services/StudentService.cs" />
+        <option value="$PROJECT_DIR$/Models/Student.cs" />
+        <option value="$PROJECT_DIR$/Models/BookProgress.cs" />
+        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
+        <option value="$PROJECT_DIR$/Models/Year.cs" />
+        <option value="$PROJECT_DIR$/Controllers/AdminController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/StudentController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="ProjectId" id="1ZCowV7hI5ZJeIGoX5KZVIuhkW5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -124,7 +166,7 @@
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ebook-frontend" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ebook-backend: ebook_backend">
     <configuration name="ebook-backend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -204,7 +246,11 @@
       <workItem from="1588938763538" duration="973000" />
       <workItem from="1589016634986" duration="3327000" />
       <workItem from="1589025024348" duration="3807000" />
-      <workItem from="1589092963734" duration="7588000" />
+      <workItem from="1589092963734" duration="10384000" />
+      <workItem from="1589812141479" duration="599000" />
+      <workItem from="1591700730911" duration="3456000" />
+      <workItem from="1591843842628" duration="2467000" />
+      <workItem from="1591856817772" duration="6195000" />
     </task>
     <servers />
   </component>
@@ -238,37 +284,41 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="298" width="424" height="494" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584992185050" />
-    <state width="1324" height="195" key="GridCell.Tab.0.bottom" timestamp="1589216862512">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom" timestamp="1591865006236">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.bottom/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1324" height="195" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589216862512" />
+    <state width="1324" height="195" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591865006236" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901427" />
-    <state width="1324" height="195" key="GridCell.Tab.0.center" timestamp="1589216862510">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1878" height="302" key="GridCell.Tab.0.center" timestamp="1591865006236">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.center/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1324" height="195" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589216862510" />
+    <state width="1324" height="195" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589219294573" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
+    <state width="1878" height="302" key="GridCell.Tab.0.center/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591865006236" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901425" />
-    <state width="1324" height="195" key="GridCell.Tab.0.left" timestamp="1589216862510">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1878" height="302" key="GridCell.Tab.0.left" timestamp="1591865006235">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.left/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1324" height="195" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589216862510" />
+    <state width="1324" height="195" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589219294572" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439378" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
+    <state width="1878" height="302" key="GridCell.Tab.0.left/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591865006235" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901423" />
-    <state width="1324" height="195" key="GridCell.Tab.0.right" timestamp="1589216862511">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1878" height="302" key="GridCell.Tab.0.right" timestamp="1591865006236">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.right/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
-    <state width="1324" height="195" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589216862511" />
+    <state width="1324" height="195" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
+    <state width="1878" height="302" key="GridCell.Tab.0.right/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591865006236" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901426" />
     <state width="1324" height="236" key="GridCell.Tab.1.bottom" timestamp="1589216460334">
       <screen x="0" y="0" width="1366" height="768" />
@@ -374,24 +424,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="735" y="237" width="440" height="615" key="RiderGenerateDialog/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584435246937" />
-    <state x="335" y="43" width="902" height="725" key="SettingsEditor" timestamp="1587143833665">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="471" y="60" width="902" height="725" key="SettingsEditor" timestamp="1591871070252">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="335" y="28" width="900" height="740" key="SettingsEditor/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584458374106" />
     <state x="335" y="43" width="902" height="725" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587143833665" />
     <state x="471" y="175" width="977" height="740" key="SettingsEditor/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584717760495" />
+    <state x="471" y="60" key="SettingsEditor/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591871070252" />
+    <state x="775" y="458" width="361" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591845857199">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="775" y="458" width="361" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591845857199" />
+    <state x="557" y="244" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1589219668622">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="557" y="244" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1366.768@0.0.1366.768" timestamp="1589219668622" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup" timestamp="1586101700046">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="174" width="479" height="482" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959505226" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586101700046" />
-    <state x="443" y="170" width="672" height="483" key="search.everywhere.popup" timestamp="1589216651010">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup" timestamp="1591871052914">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584459477765" />
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589216651010" />
     <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586105159132" />
     <state x="2363" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989631402" />
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591871052914" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

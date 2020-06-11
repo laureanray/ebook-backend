@@ -24,6 +24,7 @@
         <e p="Admin.cs" t="Include" />
         <e p="AdminInstructorResponse.cs" t="Include" />
         <e p="Book.cs" t="Include" />
+        <e p="BookProgress.cs" t="Include" />
         <e p="Chapter.cs" t="Include" />
         <e p="Choice.cs" t="Include" />
         <e p="CompileResult.cs" t="Include" />
@@ -67,6 +68,7 @@
           <e p="202004180240187984.jpg" t="Include" />
           <e p="202004180241438800.jpg" t="Include" />
           <e p="202004180249418960.jpg" t="Include" />
+          <e p="202005202033364111.jpg" t="Include" />
           <e p="user.png" t="Include" />
         </e>
       </e>

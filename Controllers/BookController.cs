@@ -142,6 +142,44 @@ namespace ebook_backend.Controllers
             return book;
         }
 
+        [HttpGet("makeAccessibleToAll/{bookId}")]
+        public async Task<ActionResult<Book>> MakeAccessibleToAll(long bookId)
+        {
+            var book = await _context.Books
+                .Include(a => a.Chapters)
+                .ThenInclude(q => q.Topics)
+                .Include(a => a.Courses)
+                .ThenInclude(q => q.Years)
+                .FirstOrDefaultAsync(b => b.Id == bookId);
+
+            if (book == null) return NotFound();
+            
+            book.AccessibleToAll = true;
+            _context.Entry(book).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return book;
+        }
+        
+        [HttpGet("makeNotAccessibleToAll/{bookId}")]
+        public async Task<ActionResult<Book>> MakeNotAccessibleToAll(long bookId)
+        {
+            var book = await _context.Books
+                .Include(a => a.Chapters)
+                .ThenInclude(q => q.Topics)
+                .Include(a => a.Courses)
+                .ThenInclude(q => q.Years)
+                .FirstOrDefaultAsync(b => b.Id == bookId);
+
+            if (book == null) return NotFound();
+            
+            book.AccessibleToAll = false;
+            _context.Entry(book).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return book;
+        }
+
         public static String GetTimestamp(DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");

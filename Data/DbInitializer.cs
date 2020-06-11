@@ -32,7 +32,7 @@ namespace ebook_backend.Data
                     },
                     new Student
                     {    
-                        FirstName = "Someone",
+                        FirstName = "John",
                         LastName = "Doe",
                         MiddleName = "Cruz",
                         Password = "P@$$w0rd",
@@ -42,7 +42,6 @@ namespace ebook_backend.Data
                         StudentNumber = "20151134",
                         DateCreated = DateTime.Now,
                         FirstLogin = true
-
                     }
                 };
             foreach (var student in students)
@@ -59,11 +58,11 @@ namespace ebook_backend.Data
             {
                 new Instructor
                 {
-                    FirstName = "Ruben",
-                    LastName = "Pureza",
-                    MiddleName = "Gerud",
+                    FirstName = "John",
+                    LastName = "White",
+                    MiddleName = "Walter",
                     Password = "1234",
-                    Username = "ruben",
+                    Username = "john",
                     EmployeeNumber = "1112",
                     Honorifics = "Engr.",
                     DateCreated = DateTime.Now,
@@ -72,13 +71,13 @@ namespace ebook_backend.Data
                 },
                 new Instructor
                 {
-                    FirstName = "Angela",
-                    LastName = "Santos",
-                    MiddleName = "Cruz",
+                    FirstName = "Samantha",
+                    LastName = "Rodes",
+                    MiddleName = "Wellington",
                     EmployeeNumber = "1113",
                     Honorifics = "Engr.",
                     Password = "1234",
-                    Username = "angela",
+                    Username = "sam",
                     DateCreated = DateTime.Now,
                     FirstLogin = true
 
@@ -242,6 +241,45 @@ namespace ebook_backend.Data
             }
 
             context.SaveChanges();
+
+            if (!context.BookProgresses.Any())
+            {
+                var bookProgresses = new List<BookProgress>()
+                {
+                    new BookProgress()
+                    {
+                        Book = books[0],
+                        Student = students[0],
+                        LatestProgress = "0,0"
+                    },
+                    new BookProgress()
+                    {
+                        Book = books[1],
+                        Student = students[0],
+                        LatestProgress = "0,0"
+                    },
+                    new BookProgress()
+                    {
+                        Book = books[0],
+                        Student = students[0],
+                        LatestProgress = "0,0"
+                    },
+                    new BookProgress()
+                    {
+                        Book = books[1],
+                        Student = students[1],
+                        LatestProgress = "0,0"
+                    }
+                };
+
+                foreach (var bp in bookProgresses)
+                {
+                    context.BookProgresses.Add(bp);
+                    Console.WriteLine("Added");
+                }
+
+                context.SaveChangesAsync();
+            }
         }
         
     }

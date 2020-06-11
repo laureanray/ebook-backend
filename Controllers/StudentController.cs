@@ -60,6 +60,7 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Student>> AddStudent([FromBody] Student student)
         {
             _context.Students.Add(student);
+            student.Password = BCrypt.Net.BCrypt.HashPassword("1234");
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetStudent), new {id = student.Id}, student);
         }
@@ -75,6 +76,38 @@ namespace ebook_backend.Controllers
             studentToUpdate.LastName = student.LastName;
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
             studentToUpdate.DateUpdated = DateTime.Now;
+
+            _context.Entry(studentToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return studentToUpdate;
+        }
+
+
+        [HttpPost("update-progress/{bookId}/{progress}")]
+        public async Task<ActionResult<BookProgress>> UpdateProgress(long bookId, string progress)
+        {
+            var bookProgressToUpdate = await _context.BookProgresses.FirstOrDefaultAsync(b => b.BookId == bookId);
+
+            if (bookProgressToUpdate == null) return NotFound();
+
+            bookProgressToUpdate.LatestProgress = progress;
+            _context.Entry(bookProgressToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return bookProgressToUpdate;
+        }
+
+        [HttpPost("update-password")]
+        public async Task<ActionResult<Student>> UpdatePassword([FromBody] string newPassword, [FromBody] long studentId)
+        {
+            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
+
+            if (studentToUpdate == null) return NotFound();
+
+            studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
 
             _context.Entry(studentToUpdate).State = EntityState.Modified;
 

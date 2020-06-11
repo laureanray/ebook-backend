@@ -4,6 +4,7 @@ using ebook_backend.Models;
 using ebook_backend.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ebook_backend.Controllers
 {
@@ -29,6 +30,22 @@ namespace ebook_backend.Controllers
             if (admin == null) return BadRequest();
 
             return Ok(admin);
+        }
+
+        [HttpPost("update-password")]
+        public async Task<ActionResult<Admin>> UpdatePassword([FromBody] string newPassword, [FromBody] long adminId)
+        {
+            var adminToUpdate = await _context.Admins.FirstOrDefaultAsync(s => s.Id == adminId);
+
+            if (adminToUpdate == null) return NotFound();
+
+            adminToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+            _context.Entry(adminToUpdate).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+
+            return adminToUpdate;
         }
 
 
