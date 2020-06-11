@@ -17,9 +17,11 @@ namespace ebook_backend.Models
         public string Course { get; set; }
         public string Section { get; set; }
 
+        private bool IsArchived { get; set; }
+        
         public bool FirstLogin { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
-        public virtual  ICollection<BookProgress> BookProgresses { get; set; }
+        public virtual  IEnumerable<BookProgress> BookProgresses { get; set; }
     }
 }

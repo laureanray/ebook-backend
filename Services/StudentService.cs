@@ -39,7 +39,7 @@ namespace ebook_backend.Services
         public async Task<Student> Authenticate(string studentNumber, string password)
         {
             // throw new System.NotImplementedException();
-            var student = await _context.Students.SingleOrDefaultAsync(
+            var student = await _context.Students.Include(s => s.BookProgresses).SingleOrDefaultAsync(
                 x => x.StudentNumber == studentNumber);
 
             if (student == null) return null;

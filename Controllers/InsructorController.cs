@@ -28,7 +28,6 @@ namespace ebook_backend.Controllers
         }
 
         
-        
         [HttpGet("{id}")]
         public async Task<ActionResult<Instructor>> GetInstructor(long id)
         {
@@ -79,8 +78,8 @@ namespace ebook_backend.Controllers
             return BadRequest(new {message = "Invalid Credentials"});
         }
         
-        [HttpPost("update-password")]
-        public async Task<ActionResult<Instructor>> UpdatePassword([FromBody] string newPassword, [FromBody] long instructorId)
+        [HttpPost("update-password/{instructorId}/{newPassword}")]
+        public async Task<ActionResult<Instructor>> UpdatePassword(string newPassword, long instructorId)
         {
             var instructorToUpdate = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
 

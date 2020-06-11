@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using ebook_backend.Data;
 using ebook_backend.Models;
@@ -10,30 +11,29 @@ namespace ebook_backend.Controllers
 {
     [Authorize]
     [ApiController]
+    [Route("api/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly AdminService _adminService;
-
-        public AdminController(ApplicationDbContext context, AdminService adminService)
+ 
+        public AdminController(ApplicationDbContext context)
         {
             _context = context;
-            _adminService = adminService;
         }
 
-        [AllowAnonymous]
-        [HttpPost("auth")]
-        public async Task<ActionResult<Admin>> Authenticate([FromBody] Login login)
-        {
-            var admin = await _adminService.Authenticate(login.UniqueIdentifier, login.Password);
+        // [AllowAnonymous]
+        // [HttpPost("auth")]
+        // public async Task<ActionResult<Admin>> Authenticate([FromBody] Login login)
+        // {
+        //     var admin = await _adminService.Authenticate(login.UniqueIdentifier, login.Password);
+        //
+        //     if (admin == null) return BadRequest();
+        //
+        //     return Ok(admin);
+        // }
 
-            if (admin == null) return BadRequest();
-
-            return Ok(admin);
-        }
-
-        [HttpPost("update-password")]
-        public async Task<ActionResult<Admin>> UpdatePassword([FromBody] string newPassword, [FromBody] long adminId)
+        [HttpPost("update-password/{adminId}/{newPassword}")]
+        public async Task<ActionResult<Admin>> UpdatePassword(string newPassword, long adminId)
         {
             var adminToUpdate = await _context.Admins.FirstOrDefaultAsync(s => s.Id == adminId);
 

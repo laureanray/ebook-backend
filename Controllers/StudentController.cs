@@ -30,7 +30,7 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<IEnumerable<Student>> GetStudents()
         {
-            return await _context.Students.ToListAsync();
+            return await _context.Students.Include(s => s.BookProgresses).ToListAsync();
         }
         
         [AllowAnonymous]
@@ -100,11 +100,13 @@ namespace ebook_backend.Controllers
             return bookProgressToUpdate;
         }
 
-        [HttpPost("update-password")]
-        public async Task<ActionResult<Student>> UpdatePassword([FromBody] string newPassword, [FromBody] long studentId)
+        [HttpPost("update-password/{studentId}/{newPassword}")]
+        public async Task<ActionResult<Student>> UpdatePassword(string newPassword, long studentId)
         {
             var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
-
+            studentToUpdate.FirstLogin = false;
+            
+            
             if (studentToUpdate == null) return NotFound();
 
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
