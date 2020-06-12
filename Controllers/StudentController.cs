@@ -30,7 +30,14 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<IEnumerable<Student>> GetStudents()
         {
-            return await _context.Students.Include(s => s.BookProgresses).ToListAsync();
+            return await _context.Students.Include(s => s.BookProgresses).Where(s => s.IsArchived == false).ToListAsync();
+        }
+        
+        
+        [HttpGet("archived")]
+        public async Task<IEnumerable<Student>> GetArchived()
+        {
+            return await _context.Students.Include(s => s.BookProgresses).Where(s => s.IsArchived == true).ToListAsync();
         }
         
         [AllowAnonymous]
@@ -39,12 +46,10 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Student>> Authenticate([FromBody] Login login)
         {
             var student = await _studentService.Authenticate(login.UniqueIdentifier, login.Password);
-            
             if (student == null)
             {
                 return BadRequest(new {message = "Invalid Credentials"});
             }    
-      
             return Ok(student);
         }
 
@@ -55,22 +60,16 @@ namespace ebook_backend.Controllers
             return student;
         }
 
-
         [HttpPost("add")]
         public async Task<ActionResult<Student>> AddStudent([FromBody] Student student)
         {
             // check first if unique    
-
             if (await _context.Students.FirstOrDefaultAsync(a => a.StudentNumber == student.StudentNumber) != null)
             {
                 return BadRequest();
             }
-
             _context.Students.Add(student);
             student.Password = BCrypt.Net.BCrypt.HashPassword("1234");
-            
-            
-            
             student.FirstLogin = true;
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetStudent), new {id = student.Id}, student);
@@ -80,18 +79,13 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Student>> UpdateStudent(long id, [FromBody] Student student)
         {
             var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == id);
-
             if (studentToUpdate == null) return NotFound();
-
             studentToUpdate.FirstName = student.FirstName;
             studentToUpdate.LastName = student.LastName;
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
             studentToUpdate.DateUpdated = DateTime.Now;
-
             _context.Entry(studentToUpdate).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
             return studentToUpdate;
         }
 
@@ -100,14 +94,10 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<BookProgress>> UpdateProgress(long bookId, string progress)
         {
             var bookProgressToUpdate = await _context.BookProgresses.FirstOrDefaultAsync(b => b.BookId == bookId);
-
             if (bookProgressToUpdate == null) return NotFound();
-
             bookProgressToUpdate.LatestProgress = progress;
             _context.Entry(bookProgressToUpdate).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
             return bookProgressToUpdate;
         }
 
@@ -115,18 +105,35 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Student>> UpdatePassword(string newPassword, long studentId)
         {
             var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
-            
-            
             if (studentToUpdate == null) return NotFound();
-
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
             studentToUpdate.FirstLogin = false;
-
             _context.Entry(studentToUpdate).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
             return studentToUpdate;
+        }
+
+        [HttpPost("archive/{studentId}")]
+        public async Task<ActionResult<Student>> Archive(long studentId)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
+            if (student == null) return NotFound();
+            student.IsArchived = true;
+            _context.Entry(student).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return student;
+        }
+        
+        
+        [HttpPost("restore/{studentId}")]
+        public async Task<ActionResult<Student>> Restore(long studentId)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
+            if (student == null) return NotFound();
+            student.IsArchived = false;
+            _context.Entry(student).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return student;
         }
     }
 }    

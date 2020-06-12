@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ebook_backend.Models
 {
@@ -14,6 +15,10 @@ namespace ebook_backend.Models
         public string EmployeeNumber { get; set; }
         public string Honorifics { get; set; }
         public bool FirstLogin { get; set; }
+        
+        public bool IsArchived { get; set; }
+        
+        public IEnumerable<Course> Courses { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
     }

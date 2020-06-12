@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ebook_backend.Data;
 using ebook_backend.Models;
@@ -39,8 +40,17 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Instructor>>> GetAll()
         {
-            return await _context.Instructors.ToListAsync();
+            return await _context.Instructors.Include(a => a.Courses).Where(i => i.IsArchived == false).ToListAsync();
         }
+        
+        
+        [HttpGet("archived")]
+        public async Task<ActionResult<List<Instructor>>> GetArchived()
+        {
+            return await _context.Instructors.Include(a => a.Courses).Where(i => i.IsArchived == true).ToListAsync();
+        }
+
+
         
         [HttpPost("add")]
         public async Task<ActionResult<Instructor>> AddInstructor([FromBody] Instructor instructor)
@@ -82,16 +92,34 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Instructor>> UpdatePassword(string newPassword, long instructorId)
         {
             var instructorToUpdate = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
-
             if (instructorToUpdate == null) return NotFound();
-
             instructorToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
-
             _context.Entry(instructorToUpdate).State = EntityState.Modified;
-
             await _context.SaveChangesAsync();
-
             return instructorToUpdate;
+        }
+        
+        [HttpPost("archive/{instructorId}")]
+        public async Task<ActionResult<Instructor>> Archive(long instructorId)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
+            if (instructor == null) return NotFound();
+            instructor.IsArchived = true;
+            _context.Entry(instructor).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return instructor;
+        }
+        
+        
+        [HttpPost("restore/{instructorId}")]
+        public async Task<ActionResult<Instructor>> Restore(long instructorId)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
+            if (instructor == null) return NotFound();
+            instructor.IsArchived = false;
+            _context.Entry(instructor).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return instructor;
         }
     }
 

@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/InsructorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Exam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Exam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Instructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Instructor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Student.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Student.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" afterDir="false" />
@@ -32,20 +35,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,7 +84,6 @@
         <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/Helpers/AppSettings.cs" />
         <option value="$PROJECT_DIR$/Models/ExamType.cs" />
-        <option value="$PROJECT_DIR$/Models/Exam.cs" />
         <option value="$PROJECT_DIR$/Models/CompileResult.cs" />
         <option value="$PROJECT_DIR$/Models/CompileTask.cs" />
         <option value="$PROJECT_DIR$/Controllers/CppCompilerController.cs" />
@@ -112,7 +100,6 @@
         <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Models/Topic.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Models/Course.cs" />
         <option value="$PROJECT_DIR$/Models/Book.cs" />
@@ -122,8 +109,13 @@
         <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
         <option value="$PROJECT_DIR$/Models/Year.cs" />
         <option value="$PROJECT_DIR$/Services/StudentService.cs" />
-        <option value="$PROJECT_DIR$/Models/Student.cs" />
         <option value="$PROJECT_DIR$/Controllers/AdminController.cs" />
+        <option value="$PROJECT_DIR$/Models/Assignments.cs" />
+        <option value="$PROJECT_DIR$/Models/Assignment.cs" />
+        <option value="$PROJECT_DIR$/Models/AssignedClass.cs" />
+        <option value="$PROJECT_DIR$/Models/Exam.cs" />
+        <option value="$PROJECT_DIR$/Models/Instructor.cs" />
+        <option value="$PROJECT_DIR$/Models/Student.cs" />
         <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
         <option value="$PROJECT_DIR$/Controllers/StudentController.cs" />
       </list>
@@ -243,7 +235,7 @@
       <workItem from="1591843842628" duration="2467000" />
       <workItem from="1591856817772" duration="11872000" />
       <workItem from="1591931983545" duration="852000" />
-      <workItem from="1591944053967" duration="1731000" />
+      <workItem from="1591944053967" duration="6849000" />
     </task>
     <servers />
   </component>
@@ -277,41 +269,41 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="298" width="424" height="494" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584992185050" />
-    <state width="1878" height="302" key="GridCell.Tab.0.bottom" timestamp="1591948118419">
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom" timestamp="1591963606440">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.bottom/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1878" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591948118419" />
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591963606440" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901427" />
-    <state width="1878" height="302" key="GridCell.Tab.0.center" timestamp="1591948118419">
+    <state width="1878" height="302" key="GridCell.Tab.0.center" timestamp="1591963606440">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.center/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589219294573" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1878" height="302" key="GridCell.Tab.0.center/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591948118419" />
+    <state width="1878" height="302" key="GridCell.Tab.0.center/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591963606440" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901425" />
-    <state width="1878" height="302" key="GridCell.Tab.0.left" timestamp="1591948118419">
+    <state width="1878" height="302" key="GridCell.Tab.0.left" timestamp="1591963606440">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.left/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589219294572" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439378" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1878" height="302" key="GridCell.Tab.0.left/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591948118419" />
+    <state width="1878" height="302" key="GridCell.Tab.0.left/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591963606440" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901423" />
-    <state width="1878" height="302" key="GridCell.Tab.0.right" timestamp="1591948118419">
+    <state width="1878" height="302" key="GridCell.Tab.0.right" timestamp="1591963606440">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.right/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1878" height="302" key="GridCell.Tab.0.right/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591948118419" />
+    <state width="1878" height="302" key="GridCell.Tab.0.right/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591963606440" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901426" />
     <state width="1324" height="236" key="GridCell.Tab.1.bottom" timestamp="1589216460334">
       <screen x="0" y="0" width="1366" height="768" />
@@ -437,59 +429,18 @@
     </state>
     <state x="444" y="174" width="479" height="482" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959505226" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586101700046" />
-    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup" timestamp="1591948117872">
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup" timestamp="1591964301616">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584459477765" />
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589216651010" />
     <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586105159132" />
     <state x="2363" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989631402" />
-    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591948117872" />
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1591964301616" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/BookController.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/Controllers/BookController.cs" initialLine="54">
-            <startOffsets>
-              <option value="1969" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1985" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/BookController.cs</url>
-          <line>65</line>
-          <properties documentPath="$PROJECT_DIR$/Controllers/BookController.cs" initialLine="55">
-            <startOffsets>
-              <option value="2000" />
-              <option value="2027" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2026" />
-              <option value="2045" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/BookController.cs</url>
-          <line>66</line>
-          <properties documentPath="$PROJECT_DIR$/Controllers/BookController.cs" initialLine="57">
-            <startOffsets>
-              <option value="2058" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2104" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/BookController.cs</url>
           <line>127</line>
