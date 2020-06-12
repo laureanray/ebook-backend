@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace ebook_backend.Models
 {
-   
     public class ExamItem
     {
         public long Id { get; set; }
@@ -13,4 +12,4 @@ namespace ebook_backend.Models
         public long ExamId { get; set; }
         public Exam Exam { get; set; }
     }
-}
+}      
