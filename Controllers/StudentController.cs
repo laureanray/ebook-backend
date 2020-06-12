@@ -59,8 +59,18 @@ namespace ebook_backend.Controllers
         [HttpPost("add")]
         public async Task<ActionResult<Student>> AddStudent([FromBody] Student student)
         {
+            // check first if unique    
+
+            if (await _context.Students.FirstOrDefaultAsync(a => a.StudentNumber == student.StudentNumber) != null)
+            {
+                return BadRequest();
+            }
+
             _context.Students.Add(student);
             student.Password = BCrypt.Net.BCrypt.HashPassword("1234");
+            
+            
+            
             student.FirstLogin = true;
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetStudent), new {id = student.Id}, student);
@@ -105,12 +115,12 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Student>> UpdatePassword(string newPassword, long studentId)
         {
             var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
-            studentToUpdate.FirstLogin = false;
             
             
             if (studentToUpdate == null) return NotFound();
 
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            studentToUpdate.FirstLogin = false;
 
             _context.Entry(studentToUpdate).State = EntityState.Modified;
 
