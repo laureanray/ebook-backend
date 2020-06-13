@@ -10,5 +10,6 @@ namespace ebook_backend.Models
      
         public string ChapterTitle { get; set; }
         public List<Topic> Topics { get; set; }
+        public Exam Exam { get; set; }
     }
 }

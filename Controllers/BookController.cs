@@ -35,12 +35,15 @@ namespace ebook_backend.Controllers
             return book;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<List<Book>> GetAllBooks()
         {
             return await _context.Books
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Exam)
                 .Include(b => b.Courses)
                 .ThenInclude(a => a.Years).ToListAsync();
         }
@@ -49,6 +52,8 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Book>> GetBook(long id)
         {
             var book = await _context.Books
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Exam)
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
                 .Include(b => b.Courses)

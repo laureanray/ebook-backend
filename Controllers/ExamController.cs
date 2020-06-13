@@ -35,14 +35,25 @@ namespace ebook_backend.Controllers
             return exam;
         }
 
-        [HttpPost("add")]
-        public async Task<ActionResult<Exam>> AddExam([FromBody] Exam exam)
+        [HttpPost("add/{chapterId}")]
+        public async Task<ActionResult<Exam>> AddExam([FromBody] Exam exam, long chapterId)
         {
-            _context.Exams.Add(exam);
-
+            var chapter = await _context.Chapters.FirstOrDefaultAsync(a => a.Id == chapterId);
+            if (chapter == null) return NotFound();
+            chapter.Exam = exam;
+            _context.Entry(chapter).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-
             return exam;
+        }
+
+        [HttpPost("delete/{examId}")]
+        public async Task<ActionResult<Exam>> RemoveExam(long examId)
+        {
+            var examToRemove = await _context.Exams.FirstOrDefaultAsync(e => e.Id == examId);
+            if (examToRemove == null) return NotFound();
+            _context.Exams.Remove(examToRemove);
+            await _context.SaveChangesAsync();
+            return examToRemove;
         }
         
          

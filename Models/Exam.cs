@@ -10,5 +10,7 @@ namespace ebook_backend.Models
         public List<ExamItem> ExamItems { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
+        public Chapter Chapter { get; set; }
+        public long ChapterId { get; set; }
     }
 }

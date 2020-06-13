@@ -168,6 +168,10 @@ namespace ebook_backend.Data
                         new Chapter
                         {
                             ChapterTitle = "Chapter 1",
+                            Exam = new Exam()
+                            {
+                                Instructions = "Test"
+                            },
                             Topics = new List<Topic>
                             {
                                 new Topic
@@ -237,6 +241,7 @@ namespace ebook_backend.Data
 
             foreach (var book in books)
             {
+                Console.WriteLine("added book");
                 context.Books.Add(book);
             }
 
