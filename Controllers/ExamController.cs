@@ -56,7 +56,5 @@ namespace ebook_backend.Controllers
             return examToRemove;
         }
         
-         
-        
     }
 }
