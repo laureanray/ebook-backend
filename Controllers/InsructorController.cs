@@ -121,6 +121,17 @@ namespace ebook_backend.Controllers
             await _context.SaveChangesAsync();
             return instructor;
         }
+
+        [HttpPost("reset/{instructorId}")]
+        public async Task<ActionResult<Instructor>> Reset(long instructorId)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
+            if (instructor == null) return NotFound();
+            instructor.FirstLogin = true;
+            instructor.Password = BCrypt.Net.BCrypt.HashPassword("1234");
+            await _context.SaveChangesAsync();
+            return instructor;
+        }
     }
 
     
