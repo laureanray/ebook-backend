@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -86,6 +87,21 @@ namespace ebook_backend.Controllers
             }
 
             return BadRequest(new {message = "Invalid Credentials"});
+        }
+        
+        [HttpPost("update/{id}")]
+        public async Task<ActionResult<Instructor>> UpdateInstructor(long id, [FromBody] Instructor instructor)
+        {
+            var instructorToUpdate = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == id);
+            if (instructorToUpdate == null) return NotFound();
+            instructorToUpdate.FirstName = instructor.FirstName;
+            instructorToUpdate.LastName = instructor.LastName;
+            instructorToUpdate.MiddleName = instructor.MiddleName;
+            instructorToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(instructor.Password);
+            instructorToUpdate.DateUpdated = DateTime.Now;
+            _context.Entry(instructorToUpdate).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return instructorToUpdate;
         }
         
         [HttpPost("update-password/{instructorId}/{newPassword}")]
