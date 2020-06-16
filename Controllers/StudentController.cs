@@ -82,6 +82,7 @@ namespace ebook_backend.Controllers
             if (studentToUpdate == null) return NotFound();
             studentToUpdate.FirstName = student.FirstName;
             studentToUpdate.LastName = student.LastName;
+            studentToUpdate.MiddleName = student.MiddleName;
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
             studentToUpdate.DateUpdated = DateTime.Now;
             _context.Entry(studentToUpdate).State = EntityState.Modified;
