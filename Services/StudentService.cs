@@ -40,7 +40,7 @@ namespace ebook_backend.Services
         {
             // throw new System.NotImplementedException();
             var student = await _context.Students.Include(s => s.BookProgresses).SingleOrDefaultAsync(
-                x => x.StudentNumber == studentNumber);
+                x => x.StudentNumber == studentNumber && !x.IsArchived);
 
             if (student == null) return null;
 

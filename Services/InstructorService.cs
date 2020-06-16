@@ -40,7 +40,7 @@ namespace ebook_backend.Services
         {
             // throw new System.NotImplementedException();
             var instructor = await _context.Instructors.SingleOrDefaultAsync(
-                x => x.Username == username);
+                x => x.Username == username && !x.IsArchived);
 
             if (instructor == null) return null;
 

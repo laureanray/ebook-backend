@@ -20,7 +20,6 @@ namespace ebook_backend.Controllers
             _context = context;
         }
 
-
         [HttpGet]
         public async Task<List<Exam>> GetAllExams()
         {
