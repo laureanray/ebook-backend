@@ -41,14 +41,14 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Instructor>>> GetAll()
         {
-            return await _context.Instructors.Include(a => a.Courses).Where(i => i.IsArchived == false).ToListAsync();
+            return await _context.Instructors.Include(a => a.Assignments).Where(i => i.IsArchived == false).ToListAsync();
         }
         
         
         [HttpGet("archived")]
         public async Task<ActionResult<List<Instructor>>> GetArchived()
         {
-            return await _context.Instructors.Include(a => a.Courses).Where(i => i.IsArchived == true).ToListAsync();
+            return await _context.Instructors.Include(a => a.Assignments).Where(i => i.IsArchived == true).ToListAsync();
         }
 
 
@@ -132,7 +132,7 @@ namespace ebook_backend.Controllers
         {
             var instructor = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
             if (instructor == null) return NotFound();
-            instructor.IsArchived = false;
+            instructor.IsArchived = false;    
             _context.Entry(instructor).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return instructor;

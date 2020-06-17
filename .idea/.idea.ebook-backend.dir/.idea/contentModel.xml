@@ -21,15 +21,16 @@
         <e p="AppSettings.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
+        <e p="Access.cs" t="Include" />
         <e p="Admin.cs" t="Include" />
         <e p="AdminInstructorResponse.cs" t="Include" />
+        <e p="Assignment.cs" t="Include" />
         <e p="Book.cs" t="Include" />
         <e p="BookProgress.cs" t="Include" />
         <e p="Chapter.cs" t="Include" />
         <e p="Choice.cs" t="Include" />
         <e p="CompileResult.cs" t="Include" />
         <e p="CompileTask.cs" t="Include" />
-        <e p="Course.cs" t="Include" />
         <e p="Exam.cs" t="Include" />
         <e p="ExamItem.cs" t="Include" />
         <e p="ExamType.cs" t="Include" />
@@ -37,7 +38,6 @@
         <e p="Login.cs" t="Include" />
         <e p="Student.cs" t="Include" />
         <e p="Topic.cs" t="Include" />
-        <e p="Year.cs" t="Include" />
       </e>
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">

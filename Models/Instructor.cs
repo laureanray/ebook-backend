@@ -16,9 +16,10 @@ namespace ebook_backend.Models
         public string Honorifics { get; set; }
         public bool FirstLogin { get; set; }
         
+        public List<Assignment> Assignments { get; set; } 
+        
         public bool IsArchived { get; set; }
         
-        public IEnumerable<Course> Courses { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
     }

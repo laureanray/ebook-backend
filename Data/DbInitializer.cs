@@ -66,7 +66,34 @@ namespace ebook_backend.Data
                     EmployeeNumber = "1112",
                     Honorifics = "Engr.",
                     DateCreated = DateTime.Now,
-                    FirstLogin = true
+                    FirstLogin = true,
+                    Assignments = new List<Assignment>()
+                    {
+                        new Assignment()
+                        {
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "1"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "2"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "3"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "4"
+                        }
+                    }
 
                 },
                 new Instructor
@@ -79,7 +106,34 @@ namespace ebook_backend.Data
                     Password = "1234",
                     Username = "sam",
                     DateCreated = DateTime.Now,
-                    FirstLogin = true
+                    FirstLogin = true,
+                    Assignments = new List<Assignment>()
+                    {
+                        new Assignment()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "1"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "2"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "3"
+                        },
+                        new Assignment()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "4"
+                        }
+                    }
 
                 }
             };
@@ -114,54 +168,18 @@ namespace ebook_backend.Data
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
-                    Courses = new List<Course>
+                    Accesses = new List<Access>()
                     {
-                      new Course
-                      {
-                          CourseName = "BS in Computer Engineering",
-                          Years = new List<Year>
-                          {
-                             new Year
-                             {
-                                 YearLevel = "1st"
-                             },
-                             new Year
-                             {
-                                 YearLevel = "2nd"
-                             },
-                             new Year
-                             {
-                                 YearLevel = "3rd"
-                             },
-                             new Year
-                             {
-                                 YearLevel = "4th"
-                             }
-                          }
-                      }, 
-                      new Course
-                      {
-                          CourseName = "BS in Information Technology",
-                          Years = new List<Year>
-                          {
-                              new Year
-                              {
-                                  YearLevel = "1st"
-                              },
-                              new Year
-                              {
-                                  YearLevel = "2nd"
-                              },
-                              new Year
-                              {
-                                  YearLevel = "3rd"
-                              },
-                              new Year
-                              {
-                                  YearLevel = "4th"
-                              }
-                          }
-                      }  
+                        new Access()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                        },
+                        new Access()
+                        {
+                            Course = "BSCS",
+                            Year = "1st"
+                        }
                     },
                     Chapters = new List<Chapter>
                     {
@@ -204,7 +222,19 @@ namespace ebook_backend.Data
                     BookAuthor = "Juan Dela Cruz",
                     BookDescription = "Book Description",
                     DateCreated = DateTime.Now,
-                    AccessibleToAll = true,
+                    Accesses = new List<Access>()
+                    {
+                        new Access()
+                        {
+                            Course = "BSCPE",
+                            Year = "1st",
+                        },
+                        new Access()
+                        {
+                            Course = "BSCS",
+                            Year = "1st"
+                        }
+                    },
                     Chapters = new List<Chapter>
                     {
                         new Chapter

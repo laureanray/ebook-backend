@@ -43,9 +43,7 @@ namespace ebook_backend.Controllers
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
                 .Include(b => b.Chapters)
-                .ThenInclude(a => a.Exam)
-                .Include(b => b.Courses)
-                .ThenInclude(a => a.Years).ToListAsync();
+                .ThenInclude(a => a.Exam).ToListAsync();
         }
 
         [HttpGet("{id}")]
@@ -56,8 +54,6 @@ namespace ebook_backend.Controllers
                 .ThenInclude(a => a.Exam)
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
-                .Include(b => b.Courses)
-                .ThenInclude(a => a.Years)
                 .FirstOrDefaultAsync(a => a.Id == id);
             if (book == null) return NotFound();
             return book;
@@ -127,19 +123,18 @@ namespace ebook_backend.Controllers
             return chapterToDelete;
         }
 
-        [HttpGet("removeAccess/{bookId}/{courseId}")]
-        public async Task<ActionResult<Book>> RemoveAccess(long bookId, long courseId)
+        [HttpGet("removeAccess/{bookId}/{accessId}")]
+        public async Task<ActionResult<Book>> RemoveAccess(long bookId, long accessId)
         {
             var book = await _context.Books
                 .Include(a => a.Chapters)
                     .ThenInclude(q => q.Topics)
-                .Include(a => a.Courses)
-                    .ThenInclude(q => q.Years)
+                .Include(a => a.Accesses)
                 .FirstOrDefaultAsync(b => b.Id == bookId);
             if (book == null) return NotFound();
-            var accessToRemove = book.Courses.SingleOrDefault(c => c.Id == courseId);
+            var accessToRemove = book.Accesses.SingleOrDefault(c => c.Id == accessId);
             if (accessToRemove == null) return NotFound();
-            book.Courses.Remove(accessToRemove);
+            book.Accesses.Remove(accessToRemove);
 
             _context.Entry(book).State = EntityState.Modified;
             await _context.SaveChangesAsync();
@@ -153,8 +148,7 @@ namespace ebook_backend.Controllers
             var book = await _context.Books
                 .Include(a => a.Chapters)
                 .ThenInclude(q => q.Topics)
-                .Include(a => a.Courses)
-                .ThenInclude(q => q.Years)
+                .Include(a => a.Accesses)
                 .FirstOrDefaultAsync(b => b.Id == bookId);
 
             if (book == null) return NotFound();
@@ -172,8 +166,7 @@ namespace ebook_backend.Controllers
             var book = await _context.Books
                 .Include(a => a.Chapters)
                 .ThenInclude(q => q.Topics)
-                .Include(a => a.Courses)
-                .ThenInclude(q => q.Years)
+                .Include(a => a.Accesses)
                 .FirstOrDefaultAsync(b => b.Id == bookId);
 
             if (book == null) return NotFound();
