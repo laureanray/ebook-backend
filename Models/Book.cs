@@ -11,6 +11,7 @@ namespace ebook_backend.Models
         public string BookAuthor { get; set; }
         public List<Chapter> Chapters { get; set; }
         public List<Access> Accesses { get; set; }
+        public List<Assignment> Assignments { get; set; }
 
         public string BookCoverURL { get; set; }
         public DateTime DateCreated { get; set; }

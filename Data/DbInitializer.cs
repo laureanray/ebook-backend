@@ -52,98 +52,6 @@ namespace ebook_backend.Data
             context.SaveChanges();
             //-------------- END ------------------
             
-            //-------------- INSTRUCTOR ------------------
-            if (context.Instructors.Any()) return;
-            var instructors = new Instructor[]
-            {
-                new Instructor
-                {
-                    FirstName = "John",
-                    LastName = "White",
-                    MiddleName = "Walter",
-                    Password = "1234",
-                    Username = "john",
-                    EmployeeNumber = "1112",
-                    Honorifics = "Engr.",
-                    DateCreated = DateTime.Now,
-                    FirstLogin = true,
-                    Assignments = new List<Assignment>()
-                    {
-                        new Assignment()
-                        {
-                            Course = "BSCS",
-                            Year = "1st",
-                            Section = "1"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCS",
-                            Year = "1st",
-                            Section = "2"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCS",
-                            Year = "1st",
-                            Section = "3"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCS",
-                            Year = "1st",
-                            Section = "4"
-                        }
-                    }
-
-                },
-                new Instructor
-                {
-                    FirstName = "Samantha",
-                    LastName = "Rodes",
-                    MiddleName = "Wellington",
-                    EmployeeNumber = "1113",
-                    Honorifics = "Engr.",
-                    Password = "1234",
-                    Username = "sam",
-                    DateCreated = DateTime.Now,
-                    FirstLogin = true,
-                    Assignments = new List<Assignment>()
-                    {
-                        new Assignment()
-                        {
-                            Course = "BSCPE",
-                            Year = "1st",
-                            Section = "1"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCPE",
-                            Year = "1st",
-                            Section = "2"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCPE",
-                            Year = "1st",
-                            Section = "3"
-                        },
-                        new Assignment()
-                        {
-                            Course = "BSCPE",
-                            Year = "1st",
-                            Section = "4"
-                        }
-                    }
-
-                }
-            };
-            foreach (var instructor in instructors)
-            {
-                instructor.Password = BCrypt.Net.BCrypt.HashPassword(instructor.Password);
-                context.Instructors.Add(instructor);
-            }
-            context.SaveChanges();
-            //-------------- END ------------------
             
             //-------------- ADMIN ------------------
             if (context.Admins.Any()) return;
@@ -315,7 +223,111 @@ namespace ebook_backend.Data
 
                 context.SaveChangesAsync();
             }
+            
+            
+                        //-------------- INSTRUCTOR ------------------
+            if (context.Instructors.Any()) return;
+            var instructors = new Instructor[]
+            {
+                new Instructor
+                {
+                    FirstName = "John",
+                    LastName = "White",
+                    MiddleName = "Walter",
+                    Password = "1234",
+                    Username = "john",
+                    EmployeeNumber = "1112",
+                    Honorifics = "Engr.",
+                    DateCreated = DateTime.Now,
+                    FirstLogin = true,
+                    Assignments = new List<Assignment>()
+                    {
+                        new Assignment()
+                        {
+                            Book = books[0],
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "1"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[0],
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "2"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[1],
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "3"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[0],
+                            Course = "BSCS",
+                            Year = "1st",
+                            Section = "4"
+                        }
+                    }
+
+                },
+                new Instructor
+                {
+                    FirstName = "Samantha",
+                    LastName = "Rodes",
+                    MiddleName = "Wellington",
+                    EmployeeNumber = "1113",
+                    Honorifics = "Engr.",
+                    Password = "1234",
+                    Username = "sam",
+                    DateCreated = DateTime.Now,
+                    FirstLogin = true,
+                    Assignments = new List<Assignment>()
+                    {
+                        new Assignment()
+                        {
+                            Book = books[1],
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "1"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[1],
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "2"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[1],
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "3"
+                        },
+                        new Assignment()
+                        {
+                            Book = books[0],
+                            Course = "BSCPE",
+                            Year = "1st",
+                            Section = "4"
+                        }
+                    }
+
+                }
+            };
+            foreach (var instructor in instructors)
+            {
+                instructor.Password = BCrypt.Net.BCrypt.HashPassword(instructor.Password);
+                context.Instructors.Add(instructor);
+            }
+            context.SaveChanges();
+            //-------------- END ------------------
         }
+        
+        
         
     }
     

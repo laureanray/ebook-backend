@@ -42,7 +42,10 @@ namespace ebook_backend.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Instructor>>> GetAll()
         {
-            return await _context.Instructors.Include(a => a.Assignments).Where(i => i.IsArchived == false).ToListAsync();
+            return await _context.Instructors
+                .Include(a => a.Assignments)
+                .ThenInclude(a => a.Book)
+                .Where(i => i.IsArchived == false).ToListAsync();
         }
         
         
@@ -154,6 +157,9 @@ namespace ebook_backend.Controllers
         public async Task<ActionResult<Instructor>> AddAssignment(long instructorId, [FromBody] Assignment assignment)
         {
             var instructor = await _context.Instructors.Include(i => i.Assignments).FirstOrDefaultAsync(i => i.Id == instructorId);
+            var ass = await _context.Assignments.Include(a => a.Book).FirstOrDefaultAsync(a =>
+                a.Course == assignment.Course && a.Year == assignment.Year && a.Section == assignment.Section && a.BookId == assignment.BookId);
+            if (ass != null) return BadRequest();
             if (instructor == null) return NotFound();
             instructor.Assignments.Add(assignment);
             _context.Entry(instructor).State = EntityState.Modified;
