@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -75,6 +76,34 @@ namespace ebook_backend.Controllers
                 .ThenInclude(b => b.Topics).ToListAsync();
             return books;
         }
+        
+        [HttpGet("get-assigned/{studentId}/{bookId}")]
+        public async Task<ActionResult<Instructor>> GetAssignedInstructor(long studentId, long bookId)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
+            if (student == null) return BadRequest("Student null");
+ 
+            var ass = await _context.Assignments.Include(a => a.Book).Where(i => i.InstructorId == 1).ToListAsync();
+            // foreach (var a in ass)
+            // {
+            //     Console.WriteLine(bookId + "==" +  a.Book.Id);
+            //     Console.WriteLine(student.Course + "==" +  a.Course);
+            //     Console.WriteLine(student.Year + "==" +  a.Year);
+            //     Console.WriteLine(student.Section + "==" +  a.Section);
+            // }
+            var assignment = await _context.Assignments
+                .Include(b => b.Book)
+                .FirstOrDefaultAsync(a => a.Book.Id == bookId &&
+                                          a.Course == student.Course &&
+                                          a.Year == student.Year &&
+                                          a.Section == student.Section);
+            if (assignment == null) return BadRequest("Assignment null");
+            var instructor = await _context.Instructors.Include(r => r.Assignments)
+                .FirstOrDefaultAsync(r => r.Assignments.Contains(assignment));
+
+            return instructor;
+        }
+
 
 
         [HttpPost("topic/update")]
