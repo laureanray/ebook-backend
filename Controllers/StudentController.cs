@@ -83,6 +83,9 @@ namespace ebook_backend.Controllers
             studentToUpdate.FirstName = student.FirstName;
             studentToUpdate.LastName = student.LastName;
             studentToUpdate.MiddleName = student.MiddleName;
+            studentToUpdate.Course = student.Course;
+            studentToUpdate.Year = student.Year;
+            studentToUpdate.Section = student.Section;
             studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
             studentToUpdate.DateUpdated = DateTime.Now;
             _context.Entry(studentToUpdate).State = EntityState.Modified;

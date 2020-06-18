@@ -12,7 +12,7 @@ namespace ebook_backend.Models
         public string StudentNumber { get; set; }
         public string Password { get; set; }
         public string Token { get; set; }
-        public string YearLevel { get; set; }
+        public string Year { get; set; }
         public string Course { get; set; }
         public string Section { get; set; }
         public bool IsArchived { get; set; }

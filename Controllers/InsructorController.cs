@@ -153,7 +153,7 @@ namespace ebook_backend.Controllers
         [HttpPost("add-assignment/{instructorId}")]
         public async Task<ActionResult<Instructor>> AddAssignment(long instructorId, [FromBody] Assignment assignment)
         {
-            var instructor = await _context.Instructors.FirstOrDefaultAsync(i => i.Id == instructorId);
+            var instructor = await _context.Instructors.Include(i => i.Assignments).FirstOrDefaultAsync(i => i.Id == instructorId);
             if (instructor == null) return NotFound();
             instructor.Assignments.Add(assignment);
             _context.Entry(instructor).State = EntityState.Modified;
