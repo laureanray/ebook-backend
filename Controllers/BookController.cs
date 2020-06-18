@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -40,6 +41,7 @@ namespace ebook_backend.Controllers
         public async Task<List<Book>> GetAllBooks()
         {
             return await _context.Books
+                .Include(b => b.Accesses)
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
                 .Include(b => b.Chapters)
@@ -57,6 +59,21 @@ namespace ebook_backend.Controllers
                 .FirstOrDefaultAsync(a => a.Id == id);
             if (book == null) return NotFound();
             return book;
+        }
+            g
+        
+        [HttpGet("accessible/{studentId}")]
+        public async Task<List<Book>> GetAccessibleBook(long studentId)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
+            var access =
+                await _context.Accesses.FirstOrDefaultAsync(a => a.Course == student.Course && a.Year == student.Year);
+            var books = await _context.Books.Where(b => b.Accesses.Contains(access))
+                .Include(b => b.Chapters)
+                .ThenInclude(b => b.Exam)
+                .Include(b => b.Chapters)
+                .ThenInclude(b => b.Topics).ToListAsync();
+            return books;
         }
 
 
@@ -142,41 +159,41 @@ namespace ebook_backend.Controllers
             return book;
         }
 
-        [HttpGet("makeAccessibleToAll/{bookId}")]
-        public async Task<ActionResult<Book>> MakeAccessibleToAll(long bookId)
-        {
-            var book = await _context.Books
-                .Include(a => a.Chapters)
-                .ThenInclude(q => q.Topics)
-                .Include(a => a.Accesses)
-                .FirstOrDefaultAsync(b => b.Id == bookId);
-
-            if (book == null) return NotFound();
-            
-            book.AccessibleToAll = true;
-            _context.Entry(book).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return book;
-        }
-        
-        [HttpGet("makeNotAccessibleToAll/{bookId}")]
-        public async Task<ActionResult<Book>> MakeNotAccessibleToAll(long bookId)
-        {
-            var book = await _context.Books
-                .Include(a => a.Chapters)
-                .ThenInclude(q => q.Topics)
-                .Include(a => a.Accesses)
-                .FirstOrDefaultAsync(b => b.Id == bookId);
-
-            if (book == null) return NotFound();
-            
-            book.AccessibleToAll = false;
-            _context.Entry(book).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return book;
-        }
+        // [HttpGet("makeAccessibleToAll/{bookId}")]
+        // public async Task<ActionResult<Book>> MakeAccessibleToAll(long bookId)
+        // {
+        //     var book = await _context.Books
+        //         .Include(a => a.Chapters)
+        //         .ThenInclude(q => q.Topics)
+        //         .Include(a => a.Accesses)
+        //         .FirstOrDefaultAsync(b => b.Id == bookId);
+        //
+        //     if (book == null) return NotFound();
+        //     
+        //     book.AccessibleToAll = true;
+        //     _context.Entry(book).State = EntityState.Modified;
+        //     await _context.SaveChangesAsync();
+        //
+        //     return book;
+        // }
+        //
+        // [HttpGet("makeNotAccessibleToAll/{bookId}")]
+        // public async Task<ActionResult<Book>> MakeNotAccessibleToAll(long bookId)
+        // {
+        //     var book = await _context.Books
+        //         .Include(a => a.Chapters)
+        //         .ThenInclude(q => q.Topics)
+        //         .Include(a => a.Accesses)
+        //         .FirstOrDefaultAsync(b => b.Id == bookId);
+        //
+        //     if (book == null) return NotFound();
+        //     
+        //     book.AccessibleToAll = false;
+        //     _context.Entry(book).State = EntityState.Modified;
+        //     await _context.SaveChangesAsync();
+        //
+        //     return book;
+        // }
 
         public static String GetTimestamp(DateTime value)
         {
