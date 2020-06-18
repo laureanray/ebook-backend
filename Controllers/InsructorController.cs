@@ -8,6 +8,7 @@ using ebook_backend.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace ebook_backend.Controllers
 {
@@ -148,6 +149,30 @@ namespace ebook_backend.Controllers
             await _context.SaveChangesAsync();
             return instructor;
         }
+
+        [HttpPost("add-assignment/{instructorId}")]
+        public async Task<ActionResult<Instructor>> AddAssignment(long instructorId, [FromBody] Assignment assignment)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(i => i.Id == instructorId);
+            if (instructor == null) return NotFound();
+            instructor.Assignments.Add(assignment);
+            _context.Entry(instructor).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return instructor;
+        }
+        
+        [HttpPost("remove-assignment/{instructorId}/{assignmentId}")]
+        public async Task<ActionResult<Instructor>> RemoveAssignment(long instructorId, long assignmentId)
+        {
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(i => i.Id == instructorId);
+            var assignment = await _context.Assignments.FirstOrDefaultAsync(a => a.Id == assignmentId);
+            if (instructor == null || assignment == null) return NotFound();
+            instructor.Assignments.Remove(assignment);
+            _context.Entry(instructor).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return instructor;
+        }
+
     }
 
     
