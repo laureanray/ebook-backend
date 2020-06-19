@@ -1307,7 +1307,7 @@
     ]
   },
   "packageFolders": {
-    "/home/lr/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1315,11 +1315,11 @@
       "projectUniqueName": "/home/lr/projects/ebook-backend/ebook-backend.csproj",
       "projectName": "ebook-backend",
       "projectPath": "/home/lr/projects/ebook-backend/ebook-backend.csproj",
-      "packagesPath": "/home/lr/.nuget/packages/",
+      "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/home/lr/projects/ebook-backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lr/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
