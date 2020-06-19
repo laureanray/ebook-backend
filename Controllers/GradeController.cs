@@ -19,12 +19,11 @@ namespace ebook_backend.Controllers
             _context = context;
         }
         
-        
-      
         [HttpGet("{id}")]
         public async Task<ActionResult<Grade>> GetGrade(long id)
         {
             var grade = await _context.Grades.FirstOrDefaultAsync(s => s.Id == id);
+            if (grade == null) return NotFound();
             return grade;
         }
 

@@ -55,6 +55,8 @@ namespace ebook_backend.Controllers
             var book = await _context.Books
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Exam)
+                .ThenInclude(a => a.ExamItems)
+                .ThenInclude(a => a.Choices)
                 .Include(b => b.Chapters)
                 .ThenInclude(a => a.Topics)
                 .FirstOrDefaultAsync(a => a.Id == id);

@@ -20,16 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/GradeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Grade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/InsructorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/BookController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BookController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ExamController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ExamController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GradeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GradeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BookProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BookProgress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Exam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Exam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DbInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/ExamItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ExamItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Grade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Grade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ebook-backend.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/ebook-backend.dll" afterDir="false" />
@@ -108,7 +106,6 @@
         <option value="$PROJECT_DIR$/Models/Assignments.cs" />
         <option value="$PROJECT_DIR$/Models/AssignedClass.cs" />
         <option value="$PROJECT_DIR$/Models/Chapter.cs" />
-        <option value="$PROJECT_DIR$/Controllers/ExamController.cs" />
         <option value="$PROJECT_DIR$/Services/StudentService.cs" />
         <option value="$PROJECT_DIR$/Models/CourseAssignments.cs" />
         <option value="$PROJECT_DIR$/Models/YearSection.cs" />
@@ -118,19 +115,20 @@
         <option value="$PROJECT_DIR$/Models/Instructor.cs" />
         <option value="$PROJECT_DIR$/Models/Admin.cs" />
         <option value="$PROJECT_DIR$/Services/InstructorService.cs" />
-        <option value="$PROJECT_DIR$/Models/Student.cs" />
         <option value="$PROJECT_DIR$/Models/Assignment.cs" />
-        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
         <option value="$PROJECT_DIR$/Models/Book.cs" />
-        <option value="$PROJECT_DIR$/Controllers/BookController.cs" />
         <option value="$PROJECT_DIR$/Models/BookProgress.cs" />
         <option value="$PROJECT_DIR$/Controllers/InsructorController.cs" />
-        <option value="$PROJECT_DIR$/Models/ExamItem.cs" />
         <option value="$PROJECT_DIR$/Models/Exam.cs" />
         <option value="$PROJECT_DIR$/Controllers/StudentController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ExamController.cs" />
+        <option value="$PROJECT_DIR$/Models/ExamItem.cs" />
         <option value="$PROJECT_DIR$/Data/ApplicationDbContext.cs" />
-        <option value="$PROJECT_DIR$/Models/Grade.cs" />
+        <option value="$PROJECT_DIR$/Data/DbInitializer.cs" />
+        <option value="$PROJECT_DIR$/Controllers/BookController.cs" />
         <option value="$PROJECT_DIR$/Controllers/GradeController.cs" />
+        <option value="$PROJECT_DIR$/Models/Student.cs" />
+        <option value="$PROJECT_DIR$/Models/Grade.cs" />
       </list>
     </option>
   </component>
@@ -260,7 +258,7 @@
       <workItem from="1592442909860" duration="8945000" />
       <workItem from="1592467509525" duration="12625000" />
       <workItem from="1592530280795" duration="3790000" />
-      <workItem from="1592549069378" duration="6664000" />
+      <workItem from="1592549069378" duration="16022000" />
     </task>
     <servers />
   </component>
@@ -295,41 +293,41 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="298" width="424" height="494" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584992185050" />
-    <state width="1920" height="576" key="GridCell.Tab.0.bottom" timestamp="1592565024193">
+    <state width="1920" height="956" key="GridCell.Tab.0.bottom" timestamp="1592590746718">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.bottom/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1920" height="576" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592565024193" />
+    <state width="1920" height="956" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592590746718" />
     <state width="1324" height="248" key="GridCell.Tab.0.bottom/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901427" />
-    <state width="1920" height="576" key="GridCell.Tab.0.center" timestamp="1592565024192">
+    <state width="1920" height="956" key="GridCell.Tab.0.center" timestamp="1592590746718">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.center/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1589219294573" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1920" height="576" key="GridCell.Tab.0.center/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592565024192" />
+    <state width="1920" height="956" key="GridCell.Tab.0.center/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592590746718" />
     <state width="1324" height="248" key="GridCell.Tab.0.center/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901425" />
-    <state width="1920" height="576" key="GridCell.Tab.0.left" timestamp="1592565024192">
+    <state width="1920" height="956" key="GridCell.Tab.0.left" timestamp="1592590746717">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.left/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1589219294572" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439378" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1920" height="576" key="GridCell.Tab.0.left/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592565024192" />
+    <state width="1920" height="956" key="GridCell.Tab.0.left/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592590746717" />
     <state width="1324" height="248" key="GridCell.Tab.0.left/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901423" />
-    <state width="1920" height="576" key="GridCell.Tab.0.right" timestamp="1592565024193">
+    <state width="1920" height="956" key="GridCell.Tab.0.right" timestamp="1592590746718">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1324" height="313" key="GridCell.Tab.0.right/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584464752119" />
     <state width="1324" height="195" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1589219294574" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586106439379" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989650811" />
-    <state width="1920" height="576" key="GridCell.Tab.0.right/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592565024193" />
+    <state width="1920" height="956" key="GridCell.Tab.0.right/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592590746718" />
     <state width="1324" height="248" key="GridCell.Tab.0.right/0.0.3286.1080@0.0.3286.1080" timestamp="1584969901426" />
     <state width="1878" height="350" key="GridCell.Tab.1.bottom" timestamp="1592324679918">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -476,14 +474,14 @@
     <state x="444" y="174" width="479" height="482" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959505226" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586101700046" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592574045837" />
-    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup" timestamp="1592573887332">
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup" timestamp="1592589071689">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768/1920.0.1366.768@0.0.1366.768" timestamp="1584459477765" />
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589216651010" />
     <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1586105159132" />
     <state x="2363" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989631402" />
-    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592573887332" />
+    <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592589071689" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

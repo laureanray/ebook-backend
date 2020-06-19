@@ -96,7 +96,47 @@ namespace ebook_backend.Data
                             ChapterTitle = "Chapter 1",
                             Exam = new Exam()
                             {
-                                Instructions = "Test"
+                                Instructions = "Test",
+                                ExamItems = new List<ExamItem>()
+                                {
+                                    new ExamItem()
+                                    {
+                                        ExamType = "ID",
+                                        Question = "Who developed C++?",
+                                        Answer = "Bjarne Stroustrup"
+                                    },
+                                    new ExamItem()
+                                    {
+                                        ExamType = "ID",
+                                        Question = "C++ first appeared in what year?",
+                                        Answer = "1985"
+                                    },
+                                    new ExamItem()
+                                    {
+                                        ExamType = "MC",
+                                        Question = "What is the abstraction Level of C++?",
+                                        Answer = "Mid Level",
+                                        Choices = new List<Choice>()
+                                        {
+                                            new Choice()
+                                            {
+                                                ChoiceText = "Low Level"
+                                            },
+                                            new Choice()
+                                            {
+                                                ChoiceText = "Mid Level"
+                                            }, 
+                                            new Choice()
+                                            {
+                                                ChoiceText = "High Level"
+                                            }, 
+                                            new Choice()
+                                            {
+                                                ChoiceText = "Bits"
+                                            },
+                                        }
+                                    }
+                                }
                             },
                             Topics = new List<Topic>
                             {

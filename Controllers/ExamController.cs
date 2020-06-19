@@ -29,7 +29,7 @@ namespace ebook_backend.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Exam>> GetExam(long id)
         {
-            var exam = await _context.Exams.FirstOrDefaultAsync(e => e.Id == id);
+            var exam = await _context.Exams.Include(e => e.ExamItems).ThenInclude(e => e.Choices).FirstOrDefaultAsync(e => e.Id == id);
             if (exam == null) return NotFound();
             return exam;
         }
@@ -48,8 +48,12 @@ namespace ebook_backend.Controllers
         [HttpPost("delete/{examId}")]
         public async Task<ActionResult<Exam>> RemoveExam(long examId)
         {
-            var examToRemove = await _context.Exams.FirstOrDefaultAsync(e => e.Id == examId);
+            var examToRemove = await _context.Exams.Include(r => r.ExamItems).ThenInclude(r => r.Choices).FirstOrDefaultAsync(e => e.Id == examId);
             if (examToRemove == null) return NotFound();
+            // foreach (var ei in examToRemove.ExamItems)
+            // {
+            //     _context.ExamItems.Remove(ei);
+            // }
             _context.Exams.Remove(examToRemove);
             await _context.SaveChangesAsync();
             return examToRemove;

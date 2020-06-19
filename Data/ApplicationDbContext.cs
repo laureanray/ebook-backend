@@ -15,6 +15,8 @@ namespace ebook_backend.Data
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<ExamItem> ExamItems { get; set; }
+        public DbSet<Choice> Choices { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Chapter> Chapters { get; set; }
         public DbSet<BookProgress> BookProgresses { get; set; }
