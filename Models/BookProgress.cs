@@ -8,4 +8,4 @@ namespace ebook_backend.Models
         public string LatestProgress { get; set; }
         public Student Student { get; set; }
     }
-}
+}    

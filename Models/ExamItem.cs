@@ -13,4 +13,4 @@ namespace ebook_backend.Models
         public long ExamId { get; set; }
         public Exam Exam { get; set; }
     }
-}      
+}          

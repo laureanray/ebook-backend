@@ -159,7 +159,12 @@ namespace ebook_backend.Controllers
             var instructor = await _context.Instructors.Include(i => i.Assignments).FirstOrDefaultAsync(i => i.Id == instructorId);
             var ass = await _context.Assignments.Include(a => a.Book).FirstOrDefaultAsync(a =>
                 a.Course == assignment.Course && a.Year == assignment.Year && a.Section == assignment.Section && a.BookId == assignment.BookId);
-            if (ass != null) return BadRequest();
+            if (ass != null)
+            {
+                Console.WriteLine(ass.Id);    
+                return BadRequest();   
+            } 
+
             if (instructor == null) return NotFound();
             instructor.Assignments.Add(assignment);
             _context.Entry(instructor).State = EntityState.Modified;

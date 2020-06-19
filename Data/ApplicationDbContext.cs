@@ -20,5 +20,7 @@ namespace ebook_backend.Data
         public DbSet<BookProgress> BookProgresses { get; set; }
         public DbSet<Access> Accesses { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
+        
+        public DbSet<Grade> Grades { get; set; }
     }
 }

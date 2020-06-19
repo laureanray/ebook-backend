@@ -10,6 +10,7 @@
         <e p="BookController.cs" t="Include" />
         <e p="CppCompilerController.cs" t="Include" />
         <e p="ExamController.cs" t="Include" />
+        <e p="GradeController.cs" t="Include" />
         <e p="InsructorController.cs" t="Include" />
         <e p="StudentController.cs" t="Include" />
       </e>
@@ -34,6 +35,7 @@
         <e p="Exam.cs" t="Include" />
         <e p="ExamItem.cs" t="Include" />
         <e p="ExamType.cs" t="Include" />
+        <e p="Grade.cs" t="Include" />
         <e p="Instructor.cs" t="Include" />
         <e p="Login.cs" t="Include" />
         <e p="Student.cs" t="Include" />
