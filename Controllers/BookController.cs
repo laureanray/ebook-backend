@@ -71,11 +71,14 @@ namespace ebook_backend.Controllers
             var student = await _context.Students.FirstOrDefaultAsync(s => s.Id == studentId);
             var access =
                 await _context.Accesses.FirstOrDefaultAsync(a => a.Course == student.Course && a.Year == student.Year);
-            var books = await _context.Books.Where(b => b.Accesses.Contains(access))
+            var books = await _context.Books
+                .Include(b => b.Accesses)
                 .Include(b => b.Chapters)
                 .ThenInclude(b => b.Exam)
                 .Include(b => b.Chapters)
-                .ThenInclude(b => b.Topics).ToListAsync();
+                .ThenInclude(b => b.Topics)
+                .Where(b => b.Accesses.Any(a => a.Course == access.Course && a.Year == access.Year))
+                .ToListAsync();
             return books;
         }
         

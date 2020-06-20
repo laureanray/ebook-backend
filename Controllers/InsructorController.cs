@@ -55,6 +55,15 @@ namespace ebook_backend.Controllers
             return await _context.Instructors.Include(a => a.Assignments).Where(i => i.IsArchived == true).ToListAsync();
         }
 
+        
+        [HttpGet("assignments/{instructorId}")]
+        public async Task<ActionResult<List<Assignment>>> GetAssignments(long instructorId)
+        {
+            var assignments = await _context.Assignments.Include(a => a.Book).Where(i => i.InstructorId == instructorId)
+                .ToListAsync();
+            return assignments;
+        }
+        
 
         
         [HttpPost("add")]

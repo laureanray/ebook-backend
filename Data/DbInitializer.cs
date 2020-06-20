@@ -38,7 +38,20 @@ namespace ebook_backend.Data
                         Password = "1234",
                         Year = "1st",
                         Section = "2",
-                        Course = "BSCPE",
+                        Course = "BSCS",
+                        StudentNumber = "20151134",
+                        DateCreated = DateTime.Now,
+                        FirstLogin = true
+                    },
+                    new Student
+                    {    
+                        FirstName = "Mark",
+                        LastName = "Reyes",
+                        MiddleName = "Blanca",
+                        Password = "1234",
+                        Year = "1st",
+                        Section = "2",
+                        Course = "BSIT",
                         StudentNumber = "20151134",
                         DateCreated = DateTime.Now,
                         FirstLogin = true

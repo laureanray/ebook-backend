@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ebook_backend.Data;
 using ebook_backend.Models;
@@ -25,6 +28,13 @@ namespace ebook_backend.Controllers
             var grade = await _context.Grades.FirstOrDefaultAsync(s => s.Id == id);
             if (grade == null) return NotFound();
             return grade;
+        }
+        
+        [HttpGet("grades/{studentId}")]
+        public async Task<List<Grade>> GetGrades(long studentId)
+        {
+            var grades = await _context.Grades.Where(s => s.StudentId == studentId).Include(g => g.Exam).ThenInclude(g => g.Chapter).ThenInclude(g => g.Book).ToListAsync();
+            return grades;
         }
 
         [HttpPost("add")]
