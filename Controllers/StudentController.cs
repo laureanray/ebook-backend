@@ -39,6 +39,15 @@ namespace ebook_backend.Controllers
         {
             return await _context.Students.Include(s => s.BookProgresses).Where(s => s.IsArchived == true).ToListAsync();
         }
+
+        [AllowAnonymous]
+        [Route("test_ping")]
+        [HttpGet]
+        public IActionResult TestPing()
+        {
+            return Ok();
+        }
+        
         
         [AllowAnonymous]
         [Route("auth")]
