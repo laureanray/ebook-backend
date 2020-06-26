@@ -123,6 +123,7 @@ namespace ebook_backend.Controllers
             var instructorToUpdate = await _context.Instructors.FirstOrDefaultAsync(s => s.Id == instructorId);
             if (instructorToUpdate == null) return NotFound();
             instructorToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            instructorToUpdate.FirstLogin = false;
             _context.Entry(instructorToUpdate).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return instructorToUpdate;
