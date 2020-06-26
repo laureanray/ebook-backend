@@ -216,6 +216,16 @@ namespace ebook_backend.Controllers
             return chapterToDelete;
         }
 
+        [HttpGet("delete-book/{id}")]
+        public async Task<ActionResult<Book>> DeleteBook(long id)
+        {
+            var bookToDelete = await _context.Books.FirstOrDefaultAsync(c => c.Id == id);
+            if (bookToDelete == null) return NotFound();
+            _context.Books.Remove(bookToDelete);
+            await _context.SaveChangesAsync();
+            return bookToDelete; 
+        }
+        
         [HttpGet("removeAccess/{bookId}/{accessId}")]
         public async Task<ActionResult<Book>> RemoveAccess(long bookId, long accessId)
         {
