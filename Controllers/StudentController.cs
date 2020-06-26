@@ -95,7 +95,9 @@ namespace ebook_backend.Controllers
             studentToUpdate.Course = student.Course;
             studentToUpdate.Year = student.Year;
             studentToUpdate.Section = student.Section;
-            studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
+            if (String.IsNullOrEmpty(student.Password)) {
+                studentToUpdate.Password = BCrypt.Net.BCrypt.HashPassword(student.Password);
+            }
             studentToUpdate.DateUpdated = DateTime.Now;
             _context.Entry(studentToUpdate).State = EntityState.Modified;
             await _context.SaveChangesAsync();

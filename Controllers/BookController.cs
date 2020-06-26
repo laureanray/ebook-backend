@@ -134,6 +134,48 @@ namespace ebook_backend.Controllers
         }
 
 
+        [HttpPost("update-cover")]
+        public async Task<ActionResult<Book>> UpdateBookCover([FromBody] Book bookUpdate)
+        {    
+            var book = await _context.Books
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Exam)
+                .ThenInclude(a => a.ExamItems)
+                .ThenInclude(a => a.Choices)
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Topics)
+                .FirstOrDefaultAsync(a => a.Id == bookUpdate.Id);
+            if (book == null) return NotFound();
+            book.BookCoverURL = bookUpdate.BookCoverURL;
+            _context.Entry(book).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return book;
+        }
+        
+        
+        [HttpPost("update-details")]
+        public async Task<ActionResult<Book>> UpdateDetails([FromBody] Book bookUpdate)
+        {    
+            var book = await _context.Books
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Exam)
+                .ThenInclude(a => a.ExamItems)
+                .ThenInclude(a => a.Choices)
+                .Include(b => b.Chapters)
+                .ThenInclude(a => a.Topics)
+                .FirstOrDefaultAsync(a => a.Id == bookUpdate.Id);
+            if (book == null) return NotFound();
+            book.BookTitle = bookUpdate.BookTitle;
+            book.BookAuthor = bookUpdate.BookAuthor;
+            book.BookDescription = bookUpdate.BookDescription;
+            _context.Entry(book).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return book;
+        }
+
+
+
+
         [HttpPost("chapter/add")]
         public async Task<ActionResult<Chapter>> AddChapter([FromBody] Chapter chapter)
         {
