@@ -71,6 +71,7 @@ namespace ebook_backend.Controllers
         {
             _context.Instructors.Add(instructor);
             instructor.Password = BCrypt.Net.BCrypt.HashPassword("1234");
+            instructor.FirstLogin = true;
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetInstructor), new {id = instructor.Id}, instructor);
         }

@@ -188,6 +188,7 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="tatuq:q" t="Include" />
     </e>
   </component>
 </project>

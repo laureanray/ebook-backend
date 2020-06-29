@@ -1,0 +1,371 @@
+[33mcommit e84870e4af1f0f1558a9f43c485ef1fcd28ff558[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Mon Jun 29 19:18:58 2020 +0800
+
+    latest
+
+[33mcommit e67cf2e6740e8777e687d0611e8b8da3aa38d465[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 26 16:45:21 2020 +0800
+
+    fixed new password
+
+[33mcommit e9df7b63f9e7de6ac9e1593dfbc12c5a14a31181[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 26 10:19:23 2020 +0800
+
+    final commit
+
+[33mcommit 739dc4ca323c27152667b1b4548aa94b594de8df[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 26 10:00:53 2020 +0800
+
+    bug fixes
+
+[33mcommit 4a4f26eb45df476213d5e25e7306a8a805d5bd8f[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 20:35:37 2020 +0800
+
+    test ping
+
+[33mcommit 675b5415f48d7eaf8650de715430b1e0193ff2d8[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 20:19:09 2020 +0800
+
+    bug fixes
+
+[33mcommit c3e29050aeb1f43921b18344709c80179c6efad2[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 20:02:22 2020 +0800
+
+    bug fixes
+
+[33mcommit 0459a4969b48ed31ca6df8e73f3705c45ffda1fd[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 12:10:34 2020 +0800
+
+    working cpp compiler
+
+[33mcommit 0c115669edcd99178621ceed18a3190b844e62eb[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 03:14:29 2020 +0800
+
+    update port
+
+[33mcommit 4b97b27f136f0f9a1b8a4aea47655790ae3d4cea[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 02:52:16 2020 +0800
+
+    update port
+
+[33mcommit ed581841d534e352a9b93e5c6a3823c2f8bad540[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 20 02:40:35 2020 +0800
+
+    latest
+
+[33mcommit 2d5d26edbc92e0657c5f6b8bf25a349cf86ec571[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 19 21:43:55 2020 +0800
+
+    add exam controller
+
+[33mcommit c8b61b7e10c122c63b708bead41c0ca0ca7630c9[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 21:34:15 2020 +0800
+
+    fixed get book instructor
+
+[33mcommit ae65511201c9a8bc98c9b27bf649e99ffad69ae1[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 20:39:48 2020 +0800
+
+    added book in assignments
+
+[33mcommit ab1649cec1bc7fd3dbfcf0a0c0ff4deae083aa82[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 17:28:36 2020 +0800
+
+    refactor book model
+
+[33mcommit 32a81cae13e2ff271a768be51878807661f74c64[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 16:41:04 2020 +0800
+
+    fixed update method
+
+[33mcommit 611c03bc21b43a04c62b0b080b01d720ed60a8c6[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 11:56:09 2020 +0800
+
+    added assignment endpoints
+
+[33mcommit 966dd74930bec4d4631985cfc7aba3fb2dfc026d[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 18 00:07:20 2020 +0800
+
+    models refactor
+
+[33mcommit e719dce5417192952e76b57954b20d6bdc27155e[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Wed Jun 17 00:07:38 2020 +0800
+
+    added instructor update
+
+[33mcommit 92826ab94c0eff0ccf7075faccc1c04c35dc4992[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Wed Jun 17 00:05:25 2020 +0800
+
+    fixed update method
+
+[33mcommit af1d251d4d6483a79a7c491a8686377f9af0e826[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Jun 16 18:23:04 2020 +0800
+
+    added reset endpoint
+
+[33mcommit c7afcae5a07a9372a95b8711b067405497dc4e4f[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Jun 16 18:07:58 2020 +0800
+
+    added archived criteria for auth
+
+[33mcommit a0c261a8dc378af5630051c9fad93a92f61c0e71[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sun Jun 14 23:14:55 2020 +0800
+
+    latest
+
+[33mcommit b2638f52b5bc25fb82bb43b7d7fc254b3559e63d[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Jun 13 12:40:14 2020 +0800
+
+    added remove exam
+
+[33mcommit 3bdcbe1ddc7fff6597251848f248580399999a19[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 12 20:49:49 2020 +0800
+
+    changed user accounts interface
+
+[33mcommit 467d6d87620b25f06dabce473f60a82dad62cb95[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 12 20:18:58 2020 +0800
+
+    archived
+
+[33mcommit 9c660f165e393714e78726f53dd84c7f9e95d73b[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Jun 12 15:53:03 2020 +0800
+
+    added bad request hanlder
+
+[33mcommit e28aa7a92c6e0d4640f8c77875efec2f9e995362[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 11 23:21:59 2020 +0800
+
+    fixed default firstlogin to true
+
+[33mcommit 33cc13ec04c2de2f989c7097789651615d19f423[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 11 23:19:47 2020 +0800
+
+    added set-password
+
+[33mcommit 1488e555fc731b86470023b3a59dd3e948280fa9[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Jun 11 18:24:40 2020 +0800
+
+    added endpoints for student and instructor
+
+[33mcommit 47d8628ca88bcb5b346fa4c1d5a59c05dbea4201[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Jun 9 20:02:22 2020 +0800
+
+    added bookprogress
+
+[33mcommit c3b6214c1a99ffc500499b82c6b5d9e3c6ff8f51[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue May 12 01:08:27 2020 +0800
+
+    fixed remove access method
+
+[33mcommit 71a308670ad4d7353f5cc5a8840d7d10cf38df35[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue May 12 01:04:34 2020 +0800
+
+    fixed nested objects bug
+
+[33mcommit 3f52aa7d4eaccb007e7d8fe1ec716dcdbdc5a50a[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue May 12 00:51:05 2020 +0800
+
+    add removeAccess method
+
+[33mcommit cb243ac32313d43e7b8fec4657969ccc5f315397[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat May 9 19:01:19 2020 +0800
+
+    added delete chapter
+
+[33mcommit b2fe6cbbaad273012863b622ca9233911f0381f5[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Apr 18 02:42:45 2020 +0800
+
+    fixed method not allowed in book/add
+
+[33mcommit 5eb87dc7590d01d7abfa6f199df009a57ec37047[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sun Apr 5 23:34:49 2020 +0800
+
+    added endpoint refactor
+
+[33mcommit a1bcd1f8c20f554b5950a0487eee343acd900cb6[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Apr 3 19:25:23 2020 +0800
+
+    added get endpoint
+
+[33mcommit 7e3f08c55dca0f63769400154b86bf0b2c72fb00[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Apr 3 19:23:20 2020 +0800
+
+    added git ignore
+
+[33mcommit b7fcd35dbe9ddf052d8ef75323c875e706b763ed[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sun Mar 29 19:08:10 2020 +0800
+
+    upload working
+
+[33mcommit 0ab0990087ab64b47a9b746bf25ebae4e83150d8[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sun Mar 29 01:38:51 2020 +0800
+
+    added delete endpoint
+
+[33mcommit b3b603436fb3da13f9c40969dbdc5802babcad76[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Mar 28 14:07:29 2020 +0800
+
+    add topic feature added
+
+[33mcommit 6db327e755c820847947305e501351240b50210c[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sat Mar 28 02:16:53 2020 +0800
+
+    added last updated
+
+[33mcommit 55d2495d676603c2b13f73c2d10e1f3956b6dea9[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Fri Mar 27 00:36:44 2020 +0800
+
+    added update topic
+
+[33mcommit 51a50eb3076fe18e941be2b0f563646cd7cb0ce7[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Wed Mar 25 16:31:55 2020 +0800
+
+    refactor book controller
+
+[33mcommit f8123e9dd2c7ec5004928dd9d4621a4c261d21d6[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 15:02:15 2020 +0800
+
+    fixed initial data
+
+[33mcommit 4e7f45db2987f141a2f5999c7d06599eb7197656[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 04:24:53 2020 +0800
+
+    fixed FirstLogin inital state
+
+[33mcommit 8d24206e114fac3a0220e86ee3f1f70ee63ac0a3[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 03:33:59 2020 +0800
+
+    fix bug'
+
+[33mcommit e8aa53cbd952ce96efeb07cea1ca7f1c0068df37[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 03:31:34 2020 +0800
+
+    update initial data
+
+[33mcommit 1196fe6826c2e8d439149a870d18983cb1dec0cd[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 03:27:17 2020 +0800
+
+    update model properties
+
+[33mcommit 3ec1e379f9f9a64f657029349a58367abb041acd[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 24 03:23:40 2020 +0800
+
+    fixed dependency injection issue:
+
+[33mcommit 421e218cca721c859cef761e82ed7bba9be225cf[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Sun Mar 22 20:38:10 2020 +0800
+
+    fix book controller
+
+[33mcommit f7d9d5f21ee9d49a4195fbba66b2ac7fe1470aca[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 23:02:41 2020 +0800
+
+    added other controllers
+
+[33mcommit d60a2f5feccabfa0c94aee647dee3ff0181c8d35[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 16:51:06 2020 +0800
+
+    added instructor controller
+
+[33mcommit 300d117e66a9ea00f75b6f22879120ccc81f2115[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 16:37:06 2020 +0800
+
+    added admin controller
+
+[33mcommit 75b25f0b7585b29f3e9f984c61cfb70391956b84[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 15:58:04 2020 +0800
+
+    added update
+
+[33mcommit 85ac0bb0463ae4831ce27902d4e5632748f72a67[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 15:53:55 2020 +0800
+
+    Added student endpointsg
+
+[33mcommit bd594bd99ae259ee73977a1a4601b7ba6bd444eb[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Thu Mar 19 01:35:01 2020 +0800
+
+    added entities
+
+[33mcommit 7eb508f70e8a014acb5949bd3202fc299e0b9808[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Wed Mar 18 01:05:59 2020 +0800
+
+    Token working
+
+[33mcommit 3499a224233557a8eeba026c4b0cadfa97d61608[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Tue Mar 17 02:03:45 2020 +0800
+
+    Added database
+
+[33mcommit c4f0b09be88ffa7bdc284234e00fe42055c81bb2[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Mon Mar 16 23:55:24 2020 +0800
+
+    Initial Commit
+
+[33mcommit 2690e50a37159390d2d2582c8f80edbd6259fc2a[m
+Author: laureanray <laureanraybahala@gmail.com>
+Date:   Mon Mar 16 23:55:04 2020 +0800
+
+    Initial Commit

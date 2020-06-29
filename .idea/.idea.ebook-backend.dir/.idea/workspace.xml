@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="" />
+    <list default="true" id="2fd61ffe-da3a-4d00-a2a8-20166a64a369" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tatuq:q" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ebook-backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/InsructorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/InsructorController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,6 +254,7 @@
       <workItem from="1592652669341" duration="5452000" />
       <workItem from="1593131345882" duration="7114000" />
       <workItem from="1593154025970" duration="3042000" />
+      <workItem from="1593429486605" duration="512000" />
     </task>
     <servers />
   </component>
@@ -424,7 +429,6 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="335" y="43" width="902" height="725" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587143833665" />
-    <state x="471" y="175" width="977" height="740" key="SettingsEditor/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1584717760495" />
     <state x="471" y="60" key="SettingsEditor/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592452159267" />
     <state x="101" y="84" width="1722" height="881" key="VCS.FileHistoryDialog" timestamp="1592301620947">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -438,20 +442,21 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="557" y="244" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1366.768@0.0.1366.768" timestamp="1589219668622" />
-    <state x="624" y="244" width="672" height="677" key="run.anything.popup" timestamp="1592623898838">
+    <state x="624" y="244" width="672" height="677" key="run.anything.popup" timestamp="1593429992950">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="174" width="479" height="482" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1584959505226" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592623898838" />
     <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592574045837" />
-    <state x="623" y="239" width="672" height="160" key="search.everywhere.popup" timestamp="1593161058361">
+    <state x="624" y="244" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1593429992950" />
+    <state x="623" y="239" width="672" height="160" key="search.everywhere.popup" timestamp="1593429959007">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="443" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1589216651010" />
     <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@0.0.1920.1080" timestamp="1592656478779" />
     <state x="2363" y="170" width="672" height="483" key="search.everywhere.popup/0.0.1920.1080/1920.0.1366.768@1920.0.1366.768" timestamp="1584989631402" />
     <state x="623" y="239" width="945" height="680" key="search.everywhere.popup/0.0.1920.1080/1920.132.1366.768@0.0.1920.1080" timestamp="1592592398416" />
-    <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1593161058361" />
+    <state x="623" y="239" width="672" height="160" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1593429959007" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
